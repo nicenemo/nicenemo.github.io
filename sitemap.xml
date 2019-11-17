@@ -3,19 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hanskruse.eu/about/</loc>
-  </url>
-  
-  <url>
     <loc>https://hanskruse.eu/</loc>
+    <lastmod>2019-02-08T08:56:38+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://hanskruse.eu/categories/</loc>
+    <lastmod>2019-02-08T08:56:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hanskruse.eu/categories/design-pattern/</loc>
+    <lastmod>2019-02-08T08:56:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hanskruse.eu/categories/functional-programming/</loc>
+    <lastmod>2019-02-08T08:56:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hanskruse.eu/categories/java/</loc>
+    <lastmod>2019-02-08T08:56:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hanskruse.eu/categories/programming/</loc>
+    <lastmod>2019-02-08T08:56:38+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://hanskruse.eu/post/</loc>
+    <lastmod>2019-02-08T08:56:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hanskruse.eu/post/2019-02-08-super-iterator/</loc>
+    <lastmod>2019-02-08T08:56:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hanskruse.eu/post/2018-09-04-vanilla-java/</loc>
+    <lastmod>2018-09-04T08:25:14+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hanskruse.eu/about/</loc>
   </url>
   
   <url>
