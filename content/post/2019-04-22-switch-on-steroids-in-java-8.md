@@ -2,6 +2,7 @@
 layout: post
 title: "Switch on Steroids in Java 8"
 date: 2019-04-22T18:24:30+02:00
+draft:true
 ---
 In this blogpost I will create a more advanced `switch` expression in Java step by step.
 
