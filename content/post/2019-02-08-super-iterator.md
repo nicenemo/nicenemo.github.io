@@ -2,7 +2,7 @@
 layout: post
 title: "The super lazy iterator in C# and Java"
 date: 2019-02-08T08:56:38+01:00
-categories
+categories:
   - Java
   - Programming
   - Design Pattern
