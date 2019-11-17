@@ -1,0 +1,24 @@
+---
+language: minimal
+branches:
+  only:
+  - develop
+install:
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_0.59.1_Linux-64bit.deb
+  - sudo dpkg -i hugo_0.59.1_Linux-64bit.deb
+
+git:
+    submodules: false
+script:
+  - hugo
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: ./public
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  target_branch: master
+  keep_history: true
+  on:
+    branch: develop
+

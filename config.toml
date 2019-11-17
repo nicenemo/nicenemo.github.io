@@ -1,0 +1,23 @@
+baseurl = "https://hanskruse.eu/"
+title = "Hans Kruse"
+author = "Hans Kruse"
+copyright = "Copyright © 2014–2019, Hans Kruse  all rights reserved."
+canonifyurls = true
+paginate = 3
+theme = "silhouette-hugo"
+
+pygmentsUseClasses=true
+
+#disqusShortname = ""
+#googleAnalytics = ""
+
+[params]
+author = "Hans Kruse"
+introDescription = "Monadic  programmer - Software Engineer with a passion for cooking."
+contentSharing = "Feel free to share this content non commercially, Attribution-NonCommercial-ShareAlike"
+
+[social]
+# instagram = ""
+# linkedin = ""
+# twitter = "hanskruse"
+
