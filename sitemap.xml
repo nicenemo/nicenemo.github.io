@@ -3,36 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hanskruse.eu/</loc>
-    <lastmod>2019-04-22T18:24:30+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hanskruse.eu/post/</loc>
-    <lastmod>2019-04-22T18:24:30+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hanskruse.eu/post/2019-04-22-switch-on-steroids-in-java-8/</loc>
-    <lastmod>2019-04-22T18:24:30+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hanskruse.eu/post/2019-02-08-super-iterator/</loc>
-    <lastmod>2019-02-08T08:56:38+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hanskruse.eu/post/2018-09-04-vanilla-java/</loc>
-    <lastmod>2018-09-04T08:25:14+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://hanskruse.eu/about/</loc>
   </url>
   
   <url>
+    <loc>https://hanskruse.eu/</loc>
+  </url>
+  
+  <url>
     <loc>https://hanskruse.eu/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hanskruse.eu/post/</loc>
   </url>
   
   <url>
