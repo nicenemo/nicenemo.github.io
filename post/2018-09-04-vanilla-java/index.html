@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta property="og:title" content="Vanilla Java for stream copy" />
+<meta property="og:description" content="In the JavaScript community, not long ago, there was a discussion about using a library versus rolling your own implementation to achieve certain goals. Since there seems to be a new hot and happy JavaScript framework every two months or so, rolling your may be attrative to some people. It even has a name Vanilla JavaScript. Someone even proposed Vanilla-JS framework framework&hellip; ;). But how is that for Java? Java used to be slower paced but even here we have the problem of overchoise." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hanskruse.eu/post/2018-09-04-vanilla-java/" />
+<meta property="article:published_time" content="2018-09-04T08:25:14+02:00" />
+<meta property="article:modified_time" content="2018-09-04T08:25:14+02:00" />
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vanilla Java for stream copy"/>
+<meta name="twitter:description" content="In the JavaScript community, not long ago, there was a discussion about using a library versus rolling your own implementation to achieve certain goals. Since there seems to be a new hot and happy JavaScript framework every two months or so, rolling your may be attrative to some people. It even has a name Vanilla JavaScript. Someone even proposed Vanilla-JS framework framework&hellip; ;). But how is that for Java? Java used to be slower paced but even here we have the problem of overchoise."/>
+
+        
+        <title>
+  Vanilla Java for stream copy | Hans Kruse
+</title>
+
+        <link rel="icon" type="image/png" href='https://hanskruse.eu/images/favicon-16x16.png' sizes="16x16">
+        <link rel="icon" type="image/png" href='https://hanskruse.eu/images/favicon-32x32.png' sizes="32x32">  
+
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">      
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        
+        
+        
+        
+
+        <link rel="stylesheet" href="https://hanskruse.eu/css/bundle.min.b97f193de70a99ff0493bab9f65bdc1a4620f1d92b801069ccd3b39cd1f972f5.css" integrity="sha256-uX8ZPecKmf8Ek7q59lvcGkYg8dkrgBBpzNOznNH5cvU="  />
+
+        
+    <link rel="icon" type="image/png" href="https://hanskruse.eu/images/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://hanskruse.eu/images/favicon-32x32.png" sizes="32x32">
+
+<link rel="alternate" type="application/rss+xml" href='https://hanskruse.eu/index.xml' />
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Hans Kruse" />
+<meta name="copyright" content="Copyright © 2014–2019, Hans Kruse  all rights reserved." />
+
+
+<meta name="description" content="In the JavaScript community, not long ago, there was a discussion about using a library versus rolling your own implementation to achieve certain goals. Since there seems to be a new hot and happy JavaScript framework every two months or so, rolling your may be attrative to some people. It even has a name Vanilla JavaScript. Someone even proposed Vanilla-JS framework framework&amp;hellip; ;). But how is that for Java? Java used to be slower paced but even here we have the problem of overchoise.">
+
+
+    
+        
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+            <div class="container">
+                    <a class="navbar-brand pr-2" href="https://hanskruse.eu/">HANS KRUSE</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+    <a class="nav-link active" href="https://hanskruse.eu/about/">About</a>
+</li>
+
+                    </ul>
+                    <div class="social-icons d-none d-lg-block">
+                        <a class="py-2 px-2" href='https://hanskruse.eu/index.xml'><i class="fas fa-rss"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        
+<header class="feature-image d-print-none">
+</header>
+
+        
+        <div class="main">
+            
+<div class="container mt-4 post">
+    <h1>Vanilla Java for stream copy</h1>
+    <div class="mb-3">
+    <small>
+        <strong>By Hans Kruse</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Sep 4, 2018&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> 
+    </small>
+</div>
+
+    <div class="share-icons d-flex justify-content-center d-print-none">
+        <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhanskruse.eu%2fpost%2f2018-09-04-vanilla-java%2f&text=Vanilla%20Java%20for%20stream%20copy&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Tweet</small></div>
+</a>
+
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhanskruse.eu%2fpost%2f2018-09-04-vanilla-java%2f&t=Vanilla%20Java%20for%20stream%20copy" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Share</small></div>
+</a>
+
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fhanskruse.eu%2fpost%2f2018-09-04-vanilla-java%2f&title=Vanilla%20Java%20for%20stream%20copy&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Share</small></div>
+</a>
+
+<a href="javascript:window.print()" title="Print this article" class="p-2" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fa fa-print fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Print</small></div>
+</a>
+    </div>
+
+    <div class="mt-4 mb-4 main-content">
+        
+
+<p>In the JavaScript community, not long ago, there was a discussion about using a library versus rolling your own implementation to achieve certain goals. Since there seems to be a new hot and happy JavaScript framework every two months or so, rolling your may be attrative to some people. It even has a name <em>Vanilla JavaScript</em>. Someone even proposed   <em><a href="http://vanilla-js.com/">Vanilla-JS</a> framework</em> framework&hellip; ;). But how is that for Java? Java used to be slower paced but even here we have the problem of overchoise. For a simple problem you often have the following options:</p>
+
+<ol>
+<li>Program it yourself inline where you need it.</li>
+<li>Program it yourself and place it in your growing <code>Util</code> class.</li>
+<li><em>Stackoverflow</em> it and adapt to your needs, with proper credits/licensing.</li>
+<li>Pick a third party library out of 3 more options</li>
+</ol>
+
+<p>In the next few paragraphs I will explore the costs and benefits of using Vanilla Java vs using library using an example.</p>
+
+<p>Lets&rsquo;s imagine you are developing using Java 8 and you not to copy the contents of  <code>java.io.InputStream</code> to a <code>java.io.OutputStream</code>. In Java 9 you could use the new <code>transferTo</code> method as easy as:</p>
+
+<pre><code class="language-Java">  try (InputStream is = new FileInputStream(fileName);
+       OutputStream os = new FileOutputStream(fileName + &quot;.copy&quot;)){
+    is.transferTo(os);
+    }catch(final IOException exception){
+      out.println(&quot;Exception encountered: &quot; + exception);
+  }
+</code></pre>
+
+<p><em>Source: <a href="https://dzone.com/articles/transferring-inputstream-to-outputstream-in-jdk-9">DZone</a></em></p>
+
+<p>However <code>transferTo</code> is not present for Java 8 and below.
+In the context where I needed to copy stream contents the final target is a byte array. So that is what I explored first. I also realized that I already was using a library in another project to copy streams, not byte arrays, so it would be interesting to explore real stream copying.</p>
+
+<h2 id="program-it-yourself">Program it yourself</h2>
+
+<p>My first thought then was not to copy streams at all but copy the <code>InputStream</code> into a <code>byte[]</code>.
+In order to do this myself I would probably:</p>
+
+<ol>
+<li>Read the stream in chunks into a <code>List&lt;byte[]&gt;</code></li>
+<li>Keep track of the number of bytes read in the last chunk</li>
+<li>Calculate the the number of bytes need for the final target array taking into account that the last chunk probably needs less.</li>
+<li>Copy the the chunk&rsquo;s content into the target byte array taking into account that the last chunk may need less bytes.</li>
+</ol>
+
+<p>You can do this by using a simple for loop. You may also be able to use the <code>java.util.stream.Collector</code>. However with use of a collector correcting for the last chunk may be challenging and not worth it.</p>
+
+<p>Since we are inlining you have the option to convert the chunks or the final result into something completely different straight away. This may be more <em>optimal</em> ;). Ofcourse this <em>optimal</em> code needs special unit tests.</p>
+
+<p>After reading to some StackOverflow samples and library source code I think I will change my answer when asked again. I would use a <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/Buffer.html">ByteBuffer</a> instead of a plain <code>byte[]</code>.</p>
+
+<h2 id="program-it-yourself-and-place-it-in-your-util-class">Program it yourself and place it in your Util class</h2>
+
+<p>When you add the initial generic solution sketched in  the previous paragraph to your <code>Util</code> class you only have to write unit tests for copying streams once. Whether you copy that <code>Util</code> class around or make it into a nice reproduceable jar is up to you.</p>
+
+<p>In case of the stream copy example I would prefer the following test cases:</p>
+
+<ol>
+<li>Tests with null input and output</li>
+<li>Tests with empty input</li>
+<li>Tests with input and output that throw an <code>IOException</code></li>
+<li>Tests with in memory streams.</li>
+<li>Tests with file streams since memory streams are just arrays with sugar coating.</li>
+<li>Tests with a stream that is non seekable and can only read chunks or bytes going forward and cannot be reset.</li>
+</ol>
+
+<h2 id="stackoverflow-it">Stackoverflow it</h2>
+
+<p>Lots of programming problems are answered kindly on Stackoverflow. However those answers come with a catch.
+All answers on Stackoverflow are licensed under <a href="https://stackoverflow.com/help/licensing">Creative Commons Attribution-Share Alike. Proper attribution is required</a>.</p>
+
+<p>However when is a solution considered copied or just trivial code invented at more places at the same time?</p>
+
+<p>With just copying you have to consider that:</p>
+
+<ul>
+<li>You do not fully understand it.</li>
+<li>You have no idea about corner cases.</li>
+<li>You have no ideas whether an answer selected best answer is still the best answer.
+In case of the copying Streams the best answer for Java 8 is different than that for Java 9.</li>
+<li>Code samples often lack some input checks for brevity</li>
+<li>Code samples in general do not come with unit tests</li>
+</ul>
+
+<p>See:
+<a href="https://stackoverflow.com/questions/40743724/fastest-way-to-copy-a-file-over-socket?rq=1">https://stackoverflow.com/questions/40743724/fastest-way-to-copy-a-file-over-socket?rq=1</a></p>
+
+<h2 id="libraries">Libraries</h2>
+
+<p>When looking through libraries two commonly used libraries that offer stream copy are
+<a href="https://commons.apache.org/proper/commons-io/">Apache Commons IO</a> and <a href="https://github.com/google/guava/wiki">Google Guave</a> There are a few others less commonly used ones that are implemented like <em>Commons IO</em> or <em>Guave</em>.</p>
+
+<p>When I compare <em>Commons IO</em> with <em>Guave</em> I found one interesting difference. Commons IO does not use a <code>ByteBuffer</code> while <em>Guave</em> does. Why? Maybe <em>Apache Commons IO</em> does not use <code>ByteBuffer</code> because of backwards compatability with <em>JDK 6</em> and below?</p>
+
+<p>Another interesting thing I learned from reading the sources  was, that <em>Guave</em> did something different for different kind of streams. This is not something you come up with yourself unless  stream copying is your core business.</p>
+
+<h2 id="vanilla-java-or-not">Vanilla Java or not?</h2>
+
+<p>In the past, and still for demos, I would not think twice and glue a solution together out of libraries. This Frankenstein solution ofcourse contains a lot of unused code. It takes ages to download all dependencies with a clean maven cache. If you use the shade plugin to create just one jar without dependencies it would be huge.</p>
+
+<blockquote>
+<p>I experienced long deployments times with NodeJS and Azure Functions because of a lot of dependencies. I do not want that for my code, not in NodeJS, not in Java or whatever.</p>
+</blockquote>
+
+<p>Nowadays think twice before I take a dependency on a library or tool. Is it really worth it?</p>
+
+<p>What would I do when I need stream copy?</p>
+
+<p>I would:</p>
+
+<ul>
+<li>Use a library if I could use more functionality from that library and it was allowed to use that library.</li>
+<li>Roll my own using <code>ByteBuffer</code>. Taking lessons learned from Stackoverflow into account.</li>
+<li>Copy relevant parts from <em>Guave</em> or <em>Commons IO</em> if allowed with respect to licensing.</li>
+</ul>
+
+<p>Sadly Java does not have linker that only copies in relevant parts of a library.
+Using <a href="https://en.wikipedia.org/wiki/ProGuard_(software)">Proguard</a> you can do something like that, but it will not work with all code. Especially it does not work with signed code and code that uses a lot of reflection.</p>
+
+<p>Regarding stream copy, I wrote an implementation based on the Javadocs that I integrated in <a href="https://github.com/nicenemo/jnoaber">Noaber</a>, my personal experimental toolbelt Java Library.</p>
+
+
+        <div class="share-icons d-flex justify-content-center d-print-none">
+            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhanskruse.eu%2fpost%2f2018-09-04-vanilla-java%2f&text=Vanilla%20Java%20for%20stream%20copy&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Tweet</small></div>
+</a>
+
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhanskruse.eu%2fpost%2f2018-09-04-vanilla-java%2f&t=Vanilla%20Java%20for%20stream%20copy" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Share</small></div>
+</a>
+
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fhanskruse.eu%2fpost%2f2018-09-04-vanilla-java%2f&title=Vanilla%20Java%20for%20stream%20copy&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Share</small></div>
+</a>
+
+<a href="javascript:window.print()" title="Print this article" class="p-2" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fa fa-print fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Print</small></div>
+</a>
+        </div>
+    </div>
+
+    
+</div>
+<div class="sidebar d-print-none d-none d-xl-block">
+    
+        <h2>Hans Kruse</h2>
+        <div>
+            Monadic  programmer - Software Engineer with a passion for cooking.
+        </div>
+        <a href='https://hanskruse.eu/about/' class="btn btn-outline-secondary mt-3" role="button">Read More...</a>
+        <h2 class="mt-4">Top Posts</h2>
+    
+    
+    <h2 class="mt-4">Recent Posts</h2>
+    <nav class="nav flex-column">
+        
+        <a href="https://hanskruse.eu/post/2019-04-22-switch-on-steroids-in-java-8/" class="nav-link">Switch on Steroids in Java 8</a>
+        
+        <a href="https://hanskruse.eu/post/2019-02-08-super-iterator/" class="nav-link">The super lazy iterator in C# and Java</a>
+        
+        <a href="https://hanskruse.eu/post/2018-09-04-vanilla-java/" class="nav-link">Vanilla Java for stream copy</a>
+        
+    </nav>
+    
+    <h2 class="mt-4 text-capitalize">categories</h2>
+    <nav class="nav flex-column">
+        
+    </nav>
+    
+    <h2 class="mt-4 text-capitalize">tags</h2>
+    <nav class="nav flex-column">
+        
+    </nav>
+    
+</div>
+
+        </div>
+
+        <footer class="mt-auto footer d-print-none">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Copyright © 2014–2019, Hans Kruse  all rights reserved.</h5>
+Feel free to share this content non commercially, Attribution-NonCommercial-ShareAlike
+                    </div>
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Disclaimer</h5>
+Opinions expressed here are my own and may not reflect those of the company I work for, or the people I work with.
+                    </div>
+                    <div class="col-md-4 col-xl-3">
+                        <h5>About This Site</h5>
+This blog was created using the <a href="https://gohugo.io/">Hugo</a> static site generator, using
+<a href="https://getbootstrap.com/">Bootstrap</a>, using the Silhouette Hugo theme, created by
+<a href='https://www.mattbutton.com'>Matt Button</a>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="d-flex justify-content-center icons">
+                    <a class="py-2 px-2" href='https://hanskruse.eu/index.xml'><i class="fas fa-rss"></i></a>
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        
+    </body>
+</html>

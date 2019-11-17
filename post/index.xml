@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reviews on Hans Kruse</title>
+    <link>https://hanskruse.eu/post/</link>
+    <description>Recent content in Reviews on Hans Kruse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2014–2019, Hans Kruse  all rights reserved.</copyright>
+    <lastBuildDate>Mon, 22 Apr 2019 18:24:30 +0200</lastBuildDate>
+    
+	<atom:link href="https://hanskruse.eu/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Switch on Steroids in Java 8</title>
+      <link>https://hanskruse.eu/post/2019-04-22-switch-on-steroids-in-java-8/</link>
+      <pubDate>Mon, 22 Apr 2019 18:24:30 +0200</pubDate>
+      
+      <guid>https://hanskruse.eu/post/2019-04-22-switch-on-steroids-in-java-8/</guid>
+      <description>In this blogpost I will create a more advanced switch expression in Java step by step.
+Java switch statement until Java 8 I assume you are familiar with a basic C Style switch statement as is present in Java since version 1.0. If not you can look here for an example.
+If you had some exposure to functional programming, you know that Java&amp;rsquo;s switch statement corresponds to pattern matching in Functional Programming languages.</description>
+    </item>
+    
+    <item>
+      <title>The super lazy iterator in C# and Java</title>
+      <link>https://hanskruse.eu/post/2019-02-08-super-iterator/</link>
+      <pubDate>Fri, 08 Feb 2019 08:56:38 +0100</pubDate>
+      
+      <guid>https://hanskruse.eu/post/2019-02-08-super-iterator/</guid>
+      <description>A super lazy iterator is known by functional programmers as the List Monad. This is not another Monad tutorial but focusses on what was added to C# and Java to allow retrofitting this super lazy iterator to C# and Java.
+With this super iterator you can:
+ Iterate over a collection skipping elements by predicate. where clause or filter. Project the elements in a collection into something different select clause, project or map.</description>
+    </item>
+    
+    <item>
+      <title>Vanilla Java for stream copy</title>
+      <link>https://hanskruse.eu/post/2018-09-04-vanilla-java/</link>
+      <pubDate>Tue, 04 Sep 2018 08:25:14 +0200</pubDate>
+      
+      <guid>https://hanskruse.eu/post/2018-09-04-vanilla-java/</guid>
+      <description>In the JavaScript community, not long ago, there was a discussion about using a library versus rolling your own implementation to achieve certain goals. Since there seems to be a new hot and happy JavaScript framework every two months or so, rolling your may be attrative to some people. It even has a name Vanilla JavaScript. Someone even proposed Vanilla-JS framework framework&amp;hellip; ;). But how is that for Java? Java used to be slower paced but even here we have the problem of overchoise.</description>
+    </item>
+    
+  </channel>
+</rss>
