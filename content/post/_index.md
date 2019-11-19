@@ -1,5 +1,5 @@
 ---
 title: "Reviews"
-description: "All our reviews"
+description: "All my blog posts"
 ---
 
