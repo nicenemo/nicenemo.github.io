@@ -6,21 +6,10 @@
     <description>Recent content in Canard Presse on Hans Kruse</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2014–2019, Hans Kruse  all rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Feb 2019 08:56:38 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 08:25:14 +0200</lastBuildDate>
     
 	<atom:link href="https://hanskruse.eu/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>The super lazy iterator in C# and Java</title>
-      <link>https://hanskruse.eu/post/2019-02-08-super-iterator/</link>
-      <pubDate>Fri, 08 Feb 2019 08:56:38 +0100</pubDate>
-      
-      <guid>https://hanskruse.eu/post/2019-02-08-super-iterator/</guid>
-      <description>A super lazy iterator is known by functional programmers as the List Monad. This is not another Monad tutorial but focusses on what was added to C# and Java to allow retrofitting this super lazy iterator to C# and Java.
-With this super iterator you can:
- Iterate over a collection skipping elements by predicate. where clause or filter. Project the elements in a collection into something different select clause, project or map.</description>
-    </item>
     
     <item>
       <title>Vanilla Java for stream copy</title>
