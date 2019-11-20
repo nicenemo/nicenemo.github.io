@@ -1,0 +1,13 @@
+---
+layout: post
+title: Operator overloading
+date: '2010-06-20T02:17:00.001-07:00'
+author: Hans Kruse
+tags:
+- vb.net
+modified_time: '2018-08-17T03:31:19.234-07:00'
+blogger_id: tag:blogger.com,1999:blog-1516417514149439988.post-7840077929248844475
+blogger_orig_url: http://hcjkruse.blogspot.com/2010/06/operator-overloading.html
+---
+
+Although I have been doing .NET since december 1999 I never followed a formal course or did take an exam. With my new employer I am going to be certified. For this I have to pass some basic exams firsts. These are not difficult but still require some study.  <br />When reading chapter one of the course book I noticed some thing called widening and narrowing operator overloading. These two overloads allow you to create some custom type instance by assigning a simple type. This caught my attention because we use some custom types which are just some Guids wrapped in a type. The wrapping is done to distinguish their use. <br />I wrote a little test to check ik myself: <br /><pre>Option Strict On<br />Option Explicit On<br /><br />Public Class PonyTailGuid<br />    Public V As Guid<br />    Public Sub New()<br />        V = Guid.Empty<br />    End Sub<br />    Public Sub New(ByVal g As Guid)<br />        V = g<br />    End Sub<br />    Public Shared Widening Operator CType(ByVal arg As Guid) As PonyTailGuid<br />        Return New PonyTailGuid(arg)<br />    End Operator<br />    Public Shared Narrowing Operator CType(ByVal arg As PonyTailGuid) As Guid<br />        Return arg.V<br />    End Operator<br />End Class<br /><br />Public Class BaldGuid<br />    Public V As Guid<br />    Public Sub New()<br />        V = Guid.Empty<br />    End Sub<br />    Public Sub New(ByVal g As Guid)<br />        V = g<br />    End Sub<br />    Public Shared Widening Operator CType(ByVal arg As Guid) As BaldGuid<br />        Return New BaldGuid(arg)<br />    End Operator<br />    Public Shared Narrowing Operator CType(ByVal arg As BaldGuid) As Guid<br />        Return arg.V<br />    End Operator<br /><br />End Class<br /><br />Module Module1<br /><br />    Sub Main()<br />        Dim g As Guid = Guid.NewGuid<br />        Dim bg As BaldGuid = g<br />        Dim pg As PonyTailGuid = g<br />        Dim g2 As Guid = CType(bg, Guid)<br />        Dim g3 As Guid = CType(pg, Guid)<br /><br />    End Sub<br /><br />End Module<br /><br /><br /></pre>A more didactical example would be something that converts integers to a Masstype with a kilo field augmented with some non metrical mass type classes. But it is sunday evening and there are some more urgents things to do. 
