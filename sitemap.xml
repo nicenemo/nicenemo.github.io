@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hanskruse.eu/categories/</loc>
-    <lastmod>2018-09-04T08:25:14+02:00</lastmod>
+    <loc>https://hanskruse.eu/</loc>
+    <lastmod>2020-05-23T15:25:38+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hanskruse.eu/</loc>
+    <loc>https://hanskruse.eu/post/2020-05-23-keys_to_your_hands/</loc>
+    <lastmod>2020-05-23T15:25:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hanskruse.eu/post/</loc>
+    <lastmod>2020-05-23T15:25:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hanskruse.eu/categories/</loc>
     <lastmod>2018-09-04T08:25:14+02:00</lastmod>
   </url>
   
@@ -19,11 +29,6 @@
   
   <url>
     <loc>https://hanskruse.eu/categories/programming/</loc>
-    <lastmod>2018-09-04T08:25:14+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hanskruse.eu/post/</loc>
     <lastmod>2018-09-04T08:25:14+02:00</lastmod>
   </url>
   
