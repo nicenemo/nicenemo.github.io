@@ -10,7 +10,7 @@ I am looking into faster, smaller and hopefully more ergonomic keyboards.
 Below you will find a selection of my thoughts on _(custom build)_ mechanical keyboards.
  <!--more-->
 
-On a keyboard, the _home row_ is the row that you rest your fingers on on a keyboard.Typically the second row from the bottom. On a 40% keyboard, every key you need is on the _"home row"_ or one row above or below the _"home row"_. For other keys you switch modes, or layers. [Move the keys to your fingers](https://www.youtube.com/watch?v=AKGXZ1ReU54), not your fingers to the keys.
+On a keyboard, the _home row_ is the row that you rest your fingers on on a keyboard. Typically the second row from the bottom. On a 40% keyboard, every key you need is on the _"home row"_ or one row above or below the _"home row"_. For other keys you switch modes, or layers. [Move the keys to your fingers](https://www.youtube.com/watch?v=AKGXZ1ReU54), not your fingers to the keys.
 
 A custom mechanical keyboard with all options ticked is quite expensive and is easily priced between €200,- and €300,- Therefore I thought it to be  wise to emulate and try 40% and 60% keyboard first. I found a project that emulated QMK style layered keyboards using [AutoHotKey](https://www.autohotkey.com/) _(AHK)_. AutoHotKey is a keyboard macro utility (and much more) for Windows. I [cloned and modified the project](https://github.com/nicenemo/AutoHotkey), so that I have 40% and 60% keyboards on a normal 100% keyboard with the extra keys blocked and support for layers.
 
