@@ -1,71 +1,83 @@
 ---
-title: "Move the keys to your fingers, not your fingers to the keys"
+title: "Move the keys to your fingers"
 date: 2020-05-23T15:25:38+02:00
 draft: true
 categories:
   - gear
 ---
-
 For quite a while I am looking into faster, smaller and hopefully more ergonomic keyboards.
-I wrote down this overview mainly for myself, but it may be useful and entertaining for others too.
+Below you will find a selection of my thoughts on _(custom build)_ mechanical keyboards.
  <!--more-->
 
- As a freshman computer science student in 1994, I was introduced to [Vi](https://en.wikipedia.org/wiki/Vi) not [Vim](https://vim.org), but the real think Vi. Vi is an advanced editor that distinguishes itself from other editors by utilizing modes. The cursor keys, delete key, backspace key etc are not used. Instead you use h,j,k,l and other keys to move around and edit. This has the advantage of not moving yout hands from the _"home row"_, the first row below the numbers on a normal keyboard. Moving to the cursor keys and back slows you down, and maybe is also painful if you suffer from RSI.
- 
-  Every key you need is on the _"home row"_ or one row above or below the _"home row"_. For other keys you switch modes, or layers. [Bring the keys to your fingers](https://www.youtube.com/watch?v=AKGXZ1ReU54), not your fingers to the keys is the idea.
+ As a computer science student in 1994, I was introduced to [Vi](https://en.wikipedia.org/wiki/Vi) not [Vim](https://vim.org), but the real thing, Vi. Vi is an advanced editor that distinguishes itself from other editors by utilizing modes. The cursor keys, delete key, backspace key etc are not used. Instead in Vi you are in command mode first. You use _h,j,k,l_ and other keys to move around and edit. This has the advantage of not moving your hands. Moving your hands to the cursor keys and back slows you down. Using the normal cursor keys can also be painful, if you suffer from RSI. Entering text in Vi, is done by switching to input mode first. You do this, by pressing  the _i_ key. When done entering text, going back to _command mode_ is done by pressing the _Escape_ key.
 
-  Fastforward to 2020 and I am still interested working faster and more comfortable. I use vi in it's [Spacevim](https://spacevim.org/) incarnation with [Neovim](https://neovim.io/). So much that I, _wannabe_, try to configure Vim key bindings in other programs when possible. This sometimes works well, but sadly not always. Also printing out and learning some hotkeys of [Windows](https://www.hanselman.com/blog/CollectingWindows10AnniversaryEditionKeyboardShortcuts.aspx) or Mac and your favorite programs may help.
+Fast forward to 2020. I am still interested in working faster and more comfortable. I use Vi in it's [Spacevim](https://spacevim.org/) incarnation with [Neovim](https://neovim.io/). I like it so much that I, _wannabe_, try to configure Vim key bindings in other programs when possible. This sometimes works well, but sadly not always. 
 
-  There must be a better way I thought, what if my keyboard has a Vi modus. I knew about so called 10 keys less (TKL) keyboards. These are similar to common laptop keyboards in the sense that they ditch the nummeric parts. But can you go further? Yes of course you can. 
-  So called 60% keyboards like the [Ducky mecha mini](https://www.duckychannel.com.tw/en/Ducky-Mecha-Mini) and similar from other brands are popular among gamers. These do not only ditch the nummeric pad but also go without the function keys,  nav cluster and cursor keys. 
-  
-  These keys and the nummeric pads are made available by switching layers using a special key or by pressing a key like shift briefly or twice. This is similar to pressing capslock on a traditional keyboard or using modes like in vi. This requires adjustments.
+Printing out and learning some hotkeys of [Windows](https://www.hanselman.com/blog/CollectingWindows10AnniversaryEditionKeyboardShortcuts.aspx) or Mac and your favorite programs may help.
 
-  However, with a 60% keyboard I still have one row to many. The rows with the numbers is two rows away from the _"home row"_. Ditch that row and you get a so called 40% keyboard. The numbers and function keys are available on a layer. The numbers are also available as a nummeric pad on another layer. On such a keyboard you can imagine shifting the function keys and number keys virtually present above the top row. You can shift them under your fingers by activating a layer.
+There must be a better way, I thought. What if my keyboard has a Vi modus? I knew about so called 10 keys less (TKL) keyboards. These are similar to common laptop keyboards in the sense that they ditch the nummeric parts. But can you go further? 
 
-  Below I summerized the above in a small table:
+Yes of course you can. So called 60% keyboards exits, e.g.  the [Ducky mecha mini](https://www.duckychannel.com.tw/en/Ducky-Mecha-Mini) and similar from other brands. These are popular among gamers. These do not only ditch the nummeric pad but also go without the function keys,  nav cluster and cursor keys. 
 
-  | kind | remark                                                                 |
-  | :--- | :--------------------------------------------------------------------- |
-  | 100% | The normal PC keyboard                                                 |
-  | 96%  | Squeezed 100% keyboard with (almost) all the keys)                     |
-  | TKL  | Ten keys less, no nummeric pad, like a laptop.                         |
-  | 75%  | Squeezed TKL with the nav cluster on right as a row from top to bottom |
-  | 65%  | Like the 75% but with no function keys                                 |
-  | 60%  | No cursor keys, nav cluster and function keys                          |
-  | 40%  | Like the 60% but also places the numbers on a layer.                   |
-  
-  The percentage does not mean that keys are shrunk, but how many keys are still left. Keyboards with smaller keys do exist too!.  There are variations of 60% and 40% keyboards that do have cursor keys instead of right alt, Windows, shift and control keys.
+These keys and the nummeric pads are made available by switching layers using a special key or by pressing a key like shift briefly or twice. This is similar to pressing capslock on a traditional keyboard or using modes like in Vi. This requires adjustments.
 
-  So less is more, can we go furter, like 30%? Keyboards with less keys do exist, think about separate nummeric or macro pads. Other are for more specialist use like the ones stenographers use. One handed keyboards such as the [Frogpad](https://en.wikipedia.org/wiki/FrogPad) do exist. Not sure what the use case is for that except for people with disabilities.
-  
-   Keyboards with way more keys also do exist. Examples are the [Space cadet Keyboard](https://en.wikipedia.org/wiki/Space-cadet_keyboard). It has both a Hyper and a Super key. If you want to take it to the max you can go for it's modern copy the [Hyper 7](http://xahlee.info/kbd/hyper_7_keyboard.html) Another insane keyboard is the [Wytec MK6](https://www.youtube.com/watch?v=1FHkQpYBygE) a keyboard with 3 buildin screens and a KVM. This one is mainly marketed for trading floors but can also be used in other Command & Control theatres.
+However, with a 60% keyboard I still have one row to many. The rows with the numbers is two rows away from the _"home row"_. Ditch that row and you get a so called 40% keyboard. The numbers and function keys are available on a layer. The numbers are also available as a nummeric pad on another layer. On such a keyboard you can imagine shifting the function keys and number keys virtually present above the top row. You can shift them under your fingers by activating a layer.  
 
-  Besides number of keys, keyboards can also  differ in layout.
+Below I summerized the above in a small table:
 
-  | layout               | remark                                                               |
-  | :------------------- | :------------------------------------------------------------------- |
-  | horizontal staggered | The rows are shifted a litte less than half a key from each other.   |
-  | vertical staggered   | The columns are split  a litte less than half a key from each other. |
-  | Ortholinear          | All keys are in a grid, like in the normal numpad.                   |
-  | Split                | The keyboard is split in two halves connected by a wire.             |
-  | Ergonomic            | Halves at an angle and there is a called thumb cluster               |
+| kind | remark                                                                 |
+| :--- | :--------------------------------------------------------------------- |
+| 100% | The normal PC keyboard                                                 |
+| 96%  | Squeezed 100% keyboard with (almost) all the keys)                     |
+| TKL  | Ten keys less, no nummeric pad, like a laptop.                         |
+| 75%  | Squeezed TKL with the nav cluster on right as a row from top to bottom |
+| 65%  | Like the 75% but with no function keys                                 |
+| 60%  | No cursor keys, nav cluster and function keys                          |
+| 40%  | Like the 60% but also places the numbers on a layer.                   |
 
-  Combinations of aplit, ergonomic with horizontal or vertical staggering or ortholinear keyboards do exist.
+The percentage does not mean that keys are shrunk, but how many keys are still left on the keyboard. Keyboards with smaller keys do exist too! There are variations of 60% and 40% keyboards that do have cursor keys instead of right alt, Windows, shift and control keys.
 
-  I think really like the Ortholinear 40% keyboards, such as the [Planck](https://ergodox-ez.com/pages/planck) or the [Niu40](https://kbdfans.com/products/fully-assembled-niu40-mechanical-keyboard). They force you to use layers and are portable too!. However I am a bit worried about my shoulders and back when using such a tiny keyboard. Therefore a 40% split ergonomic keyboard with thumb cluster might be more suitable. This allows me to place the two halves apart so that I will not sit with bent shoulders. I can even rest the two halves on the sides of an arm chair and pretend I am captain Picard. 
+{{< figure src="https://lh3.googleusercontent.com/pw/ACtC-3ekeCDIiifmVXVHyD6zfndwl9M6A3xo7L-VMoi4JEw596ehbSUP1ZwMp5T_cZc3XFqiOljSaLScKJ-aifHVBdP2I3NKL7FVP88H700gvRpqJ6ukYzK6yK-rIoMh49M27EQKtVfxc7DgBpYzE9ICYj6vpg=s320" title="60% layout" >}}
+
+So less is more! Can we go furter? Maybe 30%? Keyboards with less keys do exist, think about separate nummeric or macro pads. Other are for more specialist use, e.g. like the ones stenographers use. One handed keyboards such as the [Frogpad](https://en.wikipedia.org/wiki/FrogPad) is another category. I am not sure what the use case is for that except for people with disabilities. In theory one key is enough to press all keys, it just requires something like Morse code to type all the keys. Hobby projects for such keyboards do exist.
+
+Keyboards with way more keys also do exist. Examples are the [Space cadet Keyboard](https://en.wikipedia.org/wiki/Space-cadet_keyboard).It has both a Hyper and a Super key. It allows for easy entering of mathematical formulas. If you want to take it to the max you can go for it's modern copy the [Hyper 7](http://xahlee.info/kbd/hyper_7_keyboard.html) Another insane keyboard is the [Wytec MK6](https://www.youtube.com/watch?v=1FHkQpYBygE) a keyboard with 3 buildin screens and a KVM. This one is mainly marketed for trading floors but can also be used in other Command & Control theatres.
+
+On a keyboard, the home row is the row that you rest your finges on on a keyboard.Typically the second row from the bottom. On a 40% keyboard, every key you need is on the _"home row"_ or one row above or below the _"home row"_. For other keys you switch modes, or layers. [Bring the keys to your fingers](https://www.youtube.com/watch?v=AKGXZ1ReU54), not your fingers to the keys is the idea.
+
+
+Besides number of keys, keyboards can also  differ in layout.
+
+| layout               | remark                                                               |
+| :------------------- | :------------------------------------------------------------------- |
+| horizontal staggered | The rows are shifted a litte less than half a key from each other.   |
+| vertical staggered   | The columns are split  a litte less than half a key from each other. |
+| Ortholinear          | All keys are in a grid, like in the normal numpad.                   |
+| Split                | The keyboard is split in two halves connected by a wire.             |
+| Ergonomic            | Halves at an angle and there is a called thumb cluster               |
+
+Combinations of a split, ergonomic with horizontal or vertical staggering or ortholinear keyboards do exist.
+
+{{< figure src="https://lh3.googleusercontent.com/pw/ACtC-3faBNha0jrMdC8nb6WXhJgV5BLN4MBpoQ9RhygRE0diM9J2XVqFASyWu3Go98tD-UQFnBJKl6JGMb0Fw3wKmOQH-bYXokSnN2SYAvWFuwTZK0mfv7s0vgs_Hvl5yMddvoLxC0HoAzHWpWLyoXgFyNUyCw=s320" title="Planck 40% Ortholinear layout" >}}
+
+
+I think really like the Ortholinear 40% keyboards, such as the [Planck](https://ergodox-ez.com/pages/planck) or the [Niu40](https://kbdfans.com/products/fully-assembled-niu40-mechanical-keyboard). They force you to use layers and are portable too!. However I am a bit worried about my shoulders and back when using such a tiny keyboard. Therefore a 40% split ergonomic keyboard with thumb cluster might be more suitable. This allows me to place the two halves apart so that I will not sit with bent shoulders. I can even rest the two halves on the sides of an arm chair and pretend I am captain Picard. 
 
 A a selection of the split keyboards I looked into:
 
-  |keyboard| remark|
-  |:---|:---|
-  |[Corne/Helidox](https://keyhive.xyz/shop/hotswap-corne-helidox)|Almost only available as DIY kit.|
-  |[Kyria](https://blog.splitkb.com/blog/introducing-the-kyria)|Split 40% with optional rotary encoders|
-  |Kyria+| Does not exist yet. Variant of the Kyria with number row|
-  |[Lilly 58](https://keyhive.xyz/shop/lily58) | Has a number row and is vertical staggered| 
-  |[Ergodox EZ](https://ergodox-ez.com/)|Big.|
-  |[Ergodone](https://kprepublic.com/collections/ergodone-1)|Clone of Ergodox|
-  |[SP50](https://www.aliexpress.com/item/32908755235.html)| No thumb cluster. Clone of other keyboard|   
+|keyboard| remark|
+|:---|:---|
+|[Corne/Helidox](https://keyhive.xyz/shop/hotswap-corne-helidox)|Almost only available as DIY kit.|
+|[Kyria](https://blog.splitkb.com/blog/introducing-the-kyria)|Split 40% with optional rotary encoders|
+|Kyria+| Does not exist yet. Variant of the Kyria with number row|
+|[Lilly 58](https://keyhive.xyz/shop/lily58) | Has a number row and is vertical staggered| 
+|[Ergodox EZ](https://ergodox-ez.com/)|Big.|
+|[Ergodone](https://kprepublic.com/collections/ergodone-1)|Clone of Ergodox|
+|[SP50](https://www.aliexpress.com/item/32908755235.html)| No thumb cluster. Clone of other keyboard|   
+
+
+{{< figure src="https://lh3.googleusercontent.com/pw/ACtC-3fs49-B6z1FGNU4lgnKTKoipnRzl_UbP2LEGLIdGymiZoXFbMwDIKQh0SdMuDW074JQ9rYDnJKtVqUOfM1dDtTaqXTRhJ1xmFhcZU5Fa1WucsZgAQet78XQou2QsAiI3GMTZNvq1Hp6nVhhZebf9n0HPA=s320" title="40% Kyria keyboard with thumb cluster" >}}
+
 
 Most of the above keyboards are solled as DIY kits that need soldering. There are shops that offer completed kits or a soldering service. Some kits do not need soldering but come with hot swap sockets. In that case you only push the switches into the circuit board and then put the switches on top. Quite often the kits or completed sets are sold in so called group buys. You order and after a certain number of people ordered to your credit card or paypal is charged and the keyboard or kit goes into production. This allows you to buy a high quality keyboard that otherwise would cost a fortune.
 
@@ -90,6 +102,6 @@ Cases for keyboards come also in all kinds of styles, sizes and materials. I pre
 
 A custom mechanical keyboard with all options ticked is quite expensive and is easily priced between EU 200,- and EU 300,- Therefore I thought it to be  wise to emulate and try 40% and 60% keyboard first. I found a project that emulated QMK style layered keyboards using [AutohotkKey](https://www.autohotkey.com/) _(AHK)_. Autohotkey is a keyboard macro Utility (and much more) for Windows. I [cloned and modified the project](https://github.com/nicenemo/AutoHotkey) so that I have 40% and 60% keyboards on a normal 100% keyboard with the extra keys blocked and support for layers.
 
-In taking minimalizing hardware to the next level, I wonder, whether in a few years time I will use such a keyboard, a portable screen and my phone. I recently had to use my phone's desktop mode because my laptop broke down and I needed to do some work. It was not perfect but doable. Some ofthe apps were made for phone use and did not have the advanced features of their desktop counterparts. My phone is powerfull enough to run a compiler and IDE. I actually tried to do some development work using Vim and a bluetooth keyboard. The screen resolution is as high as my desktop. The screen is just to small to work comfortable. Portable USB-C screens do exist.... Tempting...
+In taking minimalizing hardware to the next level, I wonder, whether in a few years time I will use such a keyboard, a portable screen and my phone. I recently had to use my phone's desktop mode because my laptop broke down and I needed to do some work. It was not perfect but doable. Some of the apps were made for phone use and did not have the advanced features of their desktop counterparts. My phone is powerfull enough to run a compiler and IDE. I actually tried to do some development work using Vim and a bluetooth keyboard. The screen resolution is as high as my desktop. The screen is just to small to work comfortable. Portable USB-C screens do exist.... Tempting...
 
 Final thought, how many keys do you have left before you die? Find out on[keysleft.com](https://keysleft.com/)
