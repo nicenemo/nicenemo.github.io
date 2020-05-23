@@ -10,15 +10,15 @@ install:
 git:
     submodules: false
 script:
-  - hugo
+  - hugo --cleanDestinationDir --minify
 
 deploy:
   provider: pages
-  skip_cleanup: true
+  skip_cleanup: false
   local_dir: ./public
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   target_branch: master
-  keep_history: true
+  keep_history: false
   on:
     branch: develop
 
