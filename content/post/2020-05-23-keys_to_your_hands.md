@@ -1,8 +1,9 @@
 ---
 title: "Move the keys to your fingers"
 date: 2020-05-23T15:25:38+02:00
-draft: true
+draft: false
 categories:
+Author: Hans Kruse
   - gear
 ---
 For quite a while I am looking into faster, smaller and hopefully more ergonomic keyboards.
