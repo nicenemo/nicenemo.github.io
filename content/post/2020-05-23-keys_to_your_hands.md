@@ -46,7 +46,6 @@ Combinations of a split, ergonomic with horizontal or vertical staggering or ort
 
 {{< figure src="https://lh3.googleusercontent.com/pw/ACtC-3faBNha0jrMdC8nb6WXhJgV5BLN4MBpoQ9RhygRE0diM9J2XVqFASyWu3Go98tD-UQFnBJKl6JGMb0Fw3wKmOQH-bYXokSnN2SYAvWFuwTZK0mfv7s0vgs_Hvl5yMddvoLxC0HoAzHWpWLyoXgFyNUyCw=s320" title="Planck 40% Ortholinear layout" >}}
 
-
 I think really like the Ortholinear 40% keyboards, such as the [Planck](https://ergodox-ez.com/pages/planck) or the [Niu40](https://kbdfans.com/products/fully-assembled-niu40-mechanical-keyboard). They force you to use layers and are portable too! However I am a bit worried about my shoulders and back when using such a tiny keyboard. Therefore a 40% split ergonomic keyboard with thumb cluster might be more suitable. This allows me to place the two halves apart so that I will not sit with bent shoulders. I can even rest the two halves on the sides of an arm chair and pretend I am captain Picard. 
 
 A a selection of the split keyboards I looked into:
