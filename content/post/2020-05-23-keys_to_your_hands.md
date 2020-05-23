@@ -6,7 +6,7 @@ categories:
 Author: Hans Kruse
   - gear
 ---
-For quite a while I am looking into faster, smaller and hopefully more ergonomic keyboards.
+I am looking into faster, smaller and hopefully more ergonomic keyboards.
 Below you will find a selection of my thoughts on _(custom build)_ mechanical keyboards.
  <!--more-->
 
