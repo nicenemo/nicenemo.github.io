@@ -10,7 +10,7 @@ install:
 git:
     submodules: false
 script:
-  - hugo --cleanDestinationDir --minify
+  - hugo --minify
 
 deploy:
   provider: pages
