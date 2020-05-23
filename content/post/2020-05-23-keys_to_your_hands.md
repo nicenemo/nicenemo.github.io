@@ -54,7 +54,7 @@ Besides number of keys, keyboards can also  differ in layout.
 | vertical staggered   | The columns are shifted a little less than half a key from each other. |
 | Ortholinear          | All keys are in a grid, like in the normal numpad.                   |
 | Split                | The keyboard is split in two halves connected by a wire.             |
-| Ergonomic            | Halves at an angle and there is a called thumb cluster               |
+| Ergonomic            | Halves at an angle and there is a so called thumb cluster               |
 
 Combinations of a split, ergonomic with horizontal or vertical staggering or ortholinear keyboards do exist.
 
