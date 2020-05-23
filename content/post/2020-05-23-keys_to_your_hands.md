@@ -77,9 +77,7 @@ Unlike your EU 14,- keyboard, keyboards like described above are driven by Ardui
 The boards I am looking at are running [QMK](https://qmk.fm/) firmware and come with layered layouts by default.
 There are a zillion different boards running this open source firmware, that is actively developed. Other boards come with their own firmware and standard layouts.
 
-LEDs. Some boards come with LEDs on top and on the bottom, or yo can add them as an option. I do not like disco lights. As long as I can turn them off that is fine. An indication for what layer I am would be nice. More civilized lighting of the keyboard can be useful when using the keyboard during a summer night from the garden.
-
-Some split keyboards com with oLED screens as options. These allow you to show the layer you are in and maybe other uses. I am not sure if I need/want that. It's cool and geeky sure!
+LEDs. Some boards come with LEDs on top and on the bottom, or yo can add them as an option. I do not like disco lights. As long as I can turn them off that is fine. An indication for what layer I am would be nice. More civilized lighting of the keyboard can be useful when using the keyboard during a summer night from the garden. Some split keyboards com with oLED screens as options. These allow you to show the layer you are in and maybe other uses. I am not sure if I need/want that. It's cool and geeky sure!
 
 Since I want a split keyboard I need an extra cable between the parts. That cable cannot be too long I read. I hope long enough for the Captain Picard command chair scenario ;). I still have to look into that.
 
