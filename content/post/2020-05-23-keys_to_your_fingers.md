@@ -3,8 +3,8 @@ title: "Move the keys to your fingers"
 date: 2020-05-23T15:25:38+02:00
 draft: false
 categories:
-Author: Hans Kruse
   - gear
+Author: Hans Kruse
 ---
 I am looking into faster, smaller and hopefully more ergonomic keyboards.
 Below you will find a selection of my thoughts on _(custom build)_ mechanical keyboards.
@@ -29,7 +29,7 @@ An overview of typical keyboard sizes:
 | :--- | :--------------------------------------------------------------------- |
 | 100% | The normal PC keyboard                                                 |
 | 96%  | Squeezed 100% keyboard with (almost) all the keys)                     |
-| TKL  | Ten keys less, no numeric pad, like a laptop.                         |
+| TKL  | Ten keys less, no numeric pad, like a laptop.                          |
 | 75%  | Squeezed TKL with the NAV cluster on right as a row from top to bottom |
 | 65%  | Like the 75% but with no function keys                                 |
 | 60%  | No cursor keys, NAV cluster and function keys                          |
@@ -39,13 +39,13 @@ An overview of typical keyboard sizes:
 
 Besides number of keys, keyboards can also  differ in layout:
 
-| layout               | remark                                                               |
-| :------------------- | :------------------------------------------------------------------- |
-| horizontal staggered | The rows are shifted a little less than half a key from each other.   |
+| layout               | remark                                                                 |
+| :------------------- | :--------------------------------------------------------------------- |
+| horizontal staggered | The rows are shifted a little less than half a key from each other.    |
 | vertical staggered   | The columns are shifted a little less than half a key from each other. |
-| Ortholinear          | All keys are in a grid, like in the normal numpad.                   |
-| Split                | The keyboard is split in two halves connected by a wire.             |
-| Ergonomic            | Halves at an angle and there is a so called thumb cluster               |
+| Ortholinear          | All keys are in a grid, like in the normal numpad.                     |
+| Split                | The keyboard is split in two halves connected by a wire.               |
+| Ergonomic            | Halves at an angle and there is a so called thumb cluster              |
 
 Combinations of a split, ergonomic with horizontal or vertical staggering or ortholinear keyboards do exist.
 
@@ -55,15 +55,15 @@ I like the Ortholinear 40% keyboards, such as the [Planck](https://ergodox-ez.co
 
 A a selection of the split keyboards I looked into:
 
-|keyboard| remark|
-|:---|:---|
-|[Corne/Helidox](https://keyhive.xyz/shop/hotswap-corne-helidox)|Almost only available as DIY kit.|
-|[Kyria](https://blog.splitkb.com/blog/introducing-the-kyria)|Split 40% with optional rotary encoders|
-|Kyria+| Does not exist yet. Variant of the Kyria with number row|
-|[Lilly 58](https://keyhive.xyz/shop/lily58) | Has a number row and is vertical staggered| 
-|[Ergodox EZ](https://ergodox-ez.com/)|Big.|
-|[Ergodone](https://kprepublic.com/collections/ergodone-1)|Clone of Ergodox|
-|[SP50](https://www.aliexpress.com/item/32908755235.html)| No thumb cluster. Clone of other keyboard|   
+| keyboard                                                        | remark                                                   |
+| :-------------------------------------------------------------- | :------------------------------------------------------- |
+| [Corne/Helidox](https://keyhive.xyz/shop/hotswap-corne-helidox) | Almost only available as DIY kit.                        |
+| [Kyria](https://blog.splitkb.com/blog/introducing-the-kyria)    | Split 40% with optional rotary encoders                  |
+| Kyria+                                                          | Does not exist yet. Variant of the Kyria with number row |
+| [Lilly 58](https://keyhive.xyz/shop/lily58)                     | Has a number row and is vertical staggered               |
+| [Ergodox EZ](https://ergodox-ez.com/)                           | Big.                                                     |
+| [Ergodone](https://kprepublic.com/collections/ergodone-1)       | Clone of Ergodox                                         |
+| [SP50](https://www.aliexpress.com/item/32908755235.html)        | No thumb cluster. Clone of other keyboard                |
 
 
 {{< figure src="https://lh3.googleusercontent.com/pw/ACtC-3fs49-B6z1FGNU4lgnKTKoipnRzl_UbP2LEGLIdGymiZoXFbMwDIKQh0SdMuDW074JQ9rYDnJKtVqUOfM1dDtTaqXTRhJ1xmFhcZU5Fa1WucsZgAQet78XQou2QsAiI3GMTZNvq1Hp6nVhhZebf9n0HPA=s320" title="40% Kyria keyboard with thumb cluster" >}}
