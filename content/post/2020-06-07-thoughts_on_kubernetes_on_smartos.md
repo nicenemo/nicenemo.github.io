@@ -16,6 +16,16 @@ tags:
 With this blog post I document the steps I took to get Ubuntu server running from scratch on [SmartOS](https://en.wikipedia.org/wiki/SmartOS) using [BHyve](https://bhyve.org/), the BSD Hypervisor. My final goal is getting [Kubernetes](https://kubernetes.io/) running on SmartOS.
 
 <!--more -->
+At home, I run SmartOS on a PC, that I use as a little NAS and some server tasks.
+It is low energy but has some power to run some virtualization tasks. Specifications:
+
+* Intel I7 T series 35 Watt TDP, Passively cooled
+* 32 Gb memory
+* 2X 2 TB disks, [ZFS](https://en.wikipedia.org/wiki/ZFS), mirrored
+* SSD as log device
+* boot from USB stick
+* Passive cooled CPU
+* Big tower case with big slow turning fans
 
 SmartOS is a free and open-source hypervisor platform supporting several flavours of virtualization. The typical light-weight zone is Solaris based, Light-weight, Linux based zones, LX zones are also possible. It is even possible to run single Docker images. KVM or the newer BHyve zones allows running arbitrary other operating systems using hardware virtualization. To increase security, these run inside a zone too with minimal privileges. People use SmartOS to virtualize BSD, Linux, Windows and even BeOS or HaikuOS. A while ago I even same some odd QEmu based virtualizations.
 
