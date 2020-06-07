@@ -22,7 +22,7 @@ It is low energy but has some power to run some virtualization tasks. Specificat
 * Intel I7 T series 35 Watt TDP, Passively cooled
 * 32 Gb memory
 * 2X 2 TB disks, [ZFS](https://en.wikipedia.org/wiki/ZFS), mirrored
-* SSD as log device
+* SSD as ZFS log device
 * boot from USB stick
 * Passive cooled CPU
 * Big tower case with big slow turning fans
