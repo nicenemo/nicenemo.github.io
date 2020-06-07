@@ -49,7 +49,7 @@ I really fancy something newer than Ubuntu 2018 and maybe even lighter than a fu
 
 * mount a CD-ROM on a BHyve zone
 * remove CD-ROM from a BHyve zone after install
-* make the disk with Ubuntu Bootable.
+* make the disk with Ubuntu Bootable
 
 I Read a few blog posts and man pages and combined a few ideas. After some trial and error I made it work! When, I finally managed to boot from CD-ROM, I saw the typical Ubuntu-server command line installer. (On the SmartOS VNC console). I was offered to install my GitHub or Ubuntu public key for password-less login. It also offered to install a lot of services. I only choose SSH, since most of the services offered where based on Snap packages. I am not sure whether I like that complexity for a Kubernetes host. Kubernetes was one of the Snaps offered. I decided to call it a day and safe my history for further scripting the installation after removing errors.
 
