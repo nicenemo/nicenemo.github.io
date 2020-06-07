@@ -15,7 +15,8 @@ tags:
 
 With this blog post I document the steps I took to get Ubuntu server running from scratch on [SmartOS](https://en.wikipedia.org/wiki/SmartOS) using [BHyve](https://bhyve.org/), the BSD Hypervisor. My final goal is getting [Kubernetes](https://kubernetes.io/) running on SmartOS.
 
-<!--more -->
+<!--more-->
+
 At home, I run SmartOS on a PC, that I use as a little NAS and some server tasks.
 It is low energy but has some power to run some virtualization tasks. Specifications:
 
