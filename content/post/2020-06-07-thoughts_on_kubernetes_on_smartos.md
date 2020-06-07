@@ -18,9 +18,9 @@ With this blog post I document the steps I took to get Ubuntu server running fro
 <!--more-->
 
 At home, I run SmartOS on a PC, that I use as a little NAS and for some server tasks.
-It is low energy but has some power to run some virtualization tasks. Specifications:
+It is low energy but has the power to run some virtualization tasks. Specifications:
 
-* Intel I7 T series 35 Watt TDP, Passively cooled
+* Intel I7 T series 35 Watt TDP, Passive cooled
 * 32 Gb memory
 * 2X 2 TB disks, [ZFS](https://en.wikipedia.org/wiki/ZFS), mirrored
 * SSD as ZFS log device
