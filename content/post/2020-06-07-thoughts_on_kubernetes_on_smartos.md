@@ -31,7 +31,7 @@ SmartOS is a free and open-source hypervisor platform supporting several flavour
 
 Nowadays the lingua franca of virtualization is [Kubernetes](https://kubernetes.io/). Kubernetes is a Linux based solution for automating deployment, scaling, and management of containerized applications. It runs in the cloud on Google, Azure and AWS. On your PC or Mac you can run it with [Docker Desktop](https://www.docker.com/products/docker-desktop) or [MiniKube](https://kubernetes.io/docs/tutorials/hello-minikube/).
 
-SmartOS does not run Kubernetes natively. With Triton, Joyent, now Samsung, tried/tries to offer a competing premium solution, on top of SmartOS. It never gained a lot of traction. Nowadays Triton can run Kubernetes. You can run simple Docker containers in SmartOS after a conversion to an LX zone. However, a simple combination of docker images with configured _docker-compose_ is not possible.
+SmartOS does not run Kubernetes natively. With [Triton](https://www.joyent.com/triton/compute), [Joyent](https://www.joyent.com/), now Samsung, tried/tries to offer a competing premium solution, on top of SmartOS. It never gained a lot of traction. Nowadays Triton can run Kubernetes, I know. You can run simple Docker containers in SmartOS after a conversion to an LX zone. However, a simple combination of docker images with configured _docker-compose_ is not possible.
 
 Triton, formerly called SmartDC, is cool but requires way more hardware resources than I like to spend on managing containers. Currently, I do prefer not to wipe my current server for native Kubernetes, Triton or something else.
 
