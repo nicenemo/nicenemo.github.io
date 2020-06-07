@@ -41,7 +41,7 @@ A couple of years ago, I tried virtualization of Windows and Linux on SmartOS KV
 For whatever reason KVM needs a gigabyte of extra memory that cannot be used.
 My server is maxed out with 32Gb of memory. Losing a Gb for every virtual machine is not attractive. So far I stayed with single LX and SmartOS zones. I never used my server for something complex. I use one LX zone with SMB NAS and a few other services.
 
-Last year, I saw [this video](https://shaner.life/deploying-kubernetes-on-smartos/) on the _Shaner's Life_ blog explaining how to run Kubernetes on SmartOS using the Bhyve hypervisor. He used Ubuntu based several Ubuntu based images to virtualize a Kubernetes cluster. This seemed exactly what I needed. However, in 2019 I had other priorities.
+Last year, I saw [this video](https://shaner.life/deploying-kubernetes-on-smartos/) on the _Shaner's Life_ blog, explaining how to run Kubernetes on SmartOS using the Bhyve hypervisor. He used Ubuntu based several Ubuntu based images to virtualize a Kubernetes cluster. This seemed exactly what I needed. However, in 2019 I had other priorities.
 
 It is now June 2020 and I really have a few use cases to run more complex Docker loads and maybe even Kubernetes. In the before mentioned video an existing Ubuntu server image for SmartOS was used. Sadly the latest KVM/BHyve Ubuntu images are from 2018. For LX zones it is even worse. SmartOS is not dead, I still see regular updates for the boot sticks but since Samsung bought Joyent, development seems a bit more silent.  
 
