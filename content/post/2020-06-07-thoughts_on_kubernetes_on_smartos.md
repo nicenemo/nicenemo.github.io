@@ -28,7 +28,7 @@ It is low energy but has some power to run some virtualization tasks. Specificat
 * Passive cooled CPU
 * Big tower case with big slow turning fans
 
-SmartOS is a free and open-source hypervisor platform supporting several flavours of virtualization. The typical light-weight zone is Solaris based, Light-weight, Linux based zones, LX zones are also possible. It is even possible to run single Docker images. KVM or the newer BHyve zones allows running arbitrary other operating systems using hardware virtualization. To increase security, these run inside a zone too with minimal privileges. People use SmartOS to virtualize BSD, Linux, Windows and even BeOS or HaikuOS. A while ago I even same some odd QEmu based virtualizations.
+SmartOS is a free and open-source hypervisor platform supporting several flavours of virtualization. The typical light-weight zone is Solaris based, Light-weight, Linux based zones, LX zones are also possible. It is even possible to run single Docker images. KVM or the newer BHyve zones allows running arbitrary operating systems using hardware virtualization. To increase security, these run inside a zone too with minimal privileges. People use SmartOS to virtualize BSD, Linux, Windows and even BeOS or HaikuOS. A while ago I even same some odd QEmu based virtualizations.
 
 Nowadays the lingua franca of virtualization is [Kubernetes](https://kubernetes.io/). Kubernetes is a Linux based solution for automating deployment, scaling, and management of containerized applications. It runs in the cloud on Google, Azure and AWS. On your PC or Mac you can run it with [Docker Desktop](https://www.docker.com/products/docker-desktop) or [MiniKube](https://kubernetes.io/docs/tutorials/hello-minikube/).
 
