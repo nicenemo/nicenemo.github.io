@@ -13,7 +13,7 @@ tags:
   -  Annoying
 ---
 
-With this blog post I document the steps I took to get Ubuntu server running from scratch on [SmartOS](https://en.wikipedia.org/wiki/SmartOS) using [BHyve](https://bhyve.org/), the BSD Hypervisor. My final goal is getting [Kubernetes](https://kubernetes.io/) running on SmartOS.
+With this blog post I document the thoughts I had in  getting Ubuntu server running from scratch on [SmartOS](https://en.wikipedia.org/wiki/SmartOS) using [BHyve](https://bhyve.org/), the BSD Hypervisor. My final goal is getting [Kubernetes](https://kubernetes.io/) running on SmartOS.
 
 <!--more-->
 
