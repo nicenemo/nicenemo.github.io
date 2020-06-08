@@ -40,7 +40,7 @@ Earlier, I tried [Project Fifo](https://project-fifo.net/), a lighter Triton alt
 
 A couple of years ago, I tried virtualization of Windows and Linux on SmartOS KVM.
 For whatever reason KVM needs a gigabyte of extra memory that cannot be used.
-My server is maxed out with 32Gb of memory. Losing a Gb for every virtual machine is not attractive. So far I stayed with single LX and SmartOS zones. I never used my server for something complex. I use one LX zone with SMB NAS and a few other services.
+My server is maxed out with 32Gb of memory. Losing a gigabyte of ram for every virtual machine is not attractive. So far I stayed with single LX and SmartOS zones. I never used my server for something complex. I use one LX zone with SMB NAS and a few other services.
 
 Last year, I saw [this video](https://shaner.life/deploying-kubernetes-on-smartos/) on the _Shaner's Life_ blog, explaining how to run Kubernetes on SmartOS using the Bhyve hypervisor. He used several Ubuntu based images to virtualize a Kubernetes cluster. This seemed exactly what I needed. However, in 2019 I had other priorities.
 
