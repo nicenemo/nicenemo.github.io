@@ -52,7 +52,7 @@ I really fancy something newer than Ubuntu 2018 and maybe even lighter than a fu
 * remove CD-ROM from a BHyve zone after install
 * make the disk with Ubuntu bootable
 
-I read a few blog posts and man pages and combined a few ideas. After some trial and error I made it work! When, I finally managed to boot from CD-ROM, I saw the typical Ubuntu-server command line installer. (On the SmartOS VNC console). I was offered to install my GitHub or Ubuntu public key for password-less login. It also offered to install a lot of services. I only choose SSH, since most of the services offered where based on [Snap packages](https://snapcraft.io/). I am not sure whether I like that complexity for a Kubernetes host. Kubernetes was one of the Snaps offered. I decided to call it a day and safe my history for further scripting the installation after removing errors.
+I read a few blog posts, man pages and combined a few ideas. After some trial and error I made it work! When, I finally managed to boot from CD-ROM, I saw the typical Ubuntu-server command line installer. (On the SmartOS VNC console). I was offered to install my GitHub or Ubuntu public key for password-less login. It also offered to install a lot of services. I only choose SSH, since most of the services offered where based on [Snap packages](https://snapcraft.io/). I am not sure whether I like that complexity for a Kubernetes host. Kubernetes was one of the Snaps offered. I decided to call it a day and safe my history for further scripting the installation after removing errors.
 
 ```bash
 hugo new post/ubuntu-server2020.04-on_SmartOS_with_BHyve.md
