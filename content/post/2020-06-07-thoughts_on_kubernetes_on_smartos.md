@@ -2,15 +2,14 @@
 title: "Thoughts on Kubernetes on SmartOS"
 date: 2020-06-07T17:48:25+02:00
 draft: false
-categories:
+tags:
+  - home automation
+  - Annoying
   - virtualization
   - Kubernetes
   - Docker
   - SmartOS
-  - 
-tags:
-  -  home automation
-  -  Annoying
+
 ---
 
 With this blog post I document the thoughts I had in  getting Ubuntu server running from scratch on [SmartOS](https://en.wikipedia.org/wiki/SmartOS) using [BHyve](https://bhyve.org/), the BSD Hypervisor. My final goal is getting [Kubernetes](https://kubernetes.io/) running on SmartOS.

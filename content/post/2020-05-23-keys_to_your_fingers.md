@@ -2,8 +2,10 @@
 title: "Move the keys to your fingers"
 date: 2020-05-23T15:25:38+02:00
 draft: false
-categories:
-  - gear
+tags:
+ - gear
+ - ergonomics
+ - smart working
 Author: Hans Kruse
 ---
 I am looking into faster, smaller and hopefully more ergonomic keyboards.

@@ -2,14 +2,13 @@
 title: "Ubuntu_from_scratch_on_smartOS_BHyve"
 date: 2020-06-07T21:44:13+02:00
 draft: true
-categories:
+tags:
   - SmartOS
   - Kubernetes
   - Ubuntu
   - Docker
-tags:
-  -  annoying
-  -  home automation
+  - annoying
+  - home automation
 ---
 
 **Insert Lead paragraph here.**
