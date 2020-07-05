@@ -107,7 +107,7 @@ I thought of running an all Linux solution instead of PowerShell. That would mea
 
 The machines are not installed with an SSH server yet. They are intended as something to use Ansible from, not, as something to administer with Ansible from the outside for now. 
 
-Networking in WSL is a bit complicated. Every WSL machine is in its own isolated subnet and ports are only accessible via port forwarding on the host. The host is available on the default route IP address. Sadly after reboot the network addresses used changed. So administering the windows host from within WSL using Ansible will be an extra challenge besides installing an SSH server on the host first.
+Networking in WSL is a bit complicated. Every WSL machine is in its own isolated subnet and ports are only accessible via port forwarding on the host. From within WSL, the host is available on the default route IP address. Sadly after reboot the network addresses used changed. So administering the windows host from within WSL using Ansible will be an extra challenge besides installing an SSH server on the host first.
   
 
 The scripts still need some maturing.
