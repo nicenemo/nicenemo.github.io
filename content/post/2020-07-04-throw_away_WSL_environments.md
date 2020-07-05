@@ -85,7 +85,7 @@ My [bootstrap-debian-images.PS1](https://github.com/nicenemo/wsl-debian-boxes/bl
 15. Remove the downloaded Windows store app.
 
 You now how 3 freshly baked tar balls for Stretch, Buster and Bullseye.
-These can be used with my [create-machine.PS1] script. This script performs the following:
+These can be used with my [create-machine.PS1](https://github.com/nicenemo/wsl-debian-boxes/blob/develop/create-machine.PS1) script. This script performs the following:
 
 1. Create a WSL virtual machine with the tar ball of your choice
 2. Upgrades the software, since it might have been a while since the last time you created the tar balls.
