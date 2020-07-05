@@ -75,7 +75,7 @@ the _Office Key_ ? It can be used to start Office the following Office programs:
 
 Do you know more?
 
-Hyper is nothing new but more commonly known has the _Hyper_ key.
+The office key is nothing new but more commonly known has the _Hyper_ key.
 The Windows key is also known as the _Super_ key.
 Some keyboards such as the [Space cadet keyboard](https://en.wikipedia.org/wiki/Space-cadet_keyboard)
 have a dedicated key labelled _Hyper_. The combination is awkward to press. Having a dedicated _Hyper_ key might be a good idea to have on my new keyboard.
