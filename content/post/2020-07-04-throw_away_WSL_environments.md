@@ -18,7 +18,7 @@ A rainy weekend is a perfect opportunity to do some yak shaving and learn a few 
 a [WSL Debian boxes](https://github.com/nicenemo/wsl-debian-boxes), a collection of PowerShell and Bash scripts
 that enable you to spin up fresh updated and Ansible enabled [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) 2, based machines at lightning speed. Create an environment to test software. Yak shave your development environment and more.
 
-<!-- More -->
+<!--more-->
 
 The last few weeks I have been automating virtual environment creation as part of my job,
 using [Ansible](https://www.ansible.com/).
