@@ -109,12 +109,12 @@ The machines are not installed with an SSH server yet. They are intended as some
 
 Networking in WSL is a bit complicated. Every WSL machine is in its own isolated subnet and ports are only accessible via port forwarding on the host. From within WSL, the host is available on the default route IP address. Sadly after reboot the network addresses used changed. So administering the windows host from within WSL using Ansible will be an extra challenge besides installing an SSH server on the host first.
 
-If you used [Vagrant](https://www.vagrantup.com/) and or [Packer](https://www.packer.io/) before then the approach taken should look familiar. These tools abstract and or simplify the creation and deployment of virtual machine images and environments on various virtualization solutions. Perhaps they will support WSL one day, and I can retire these scripts. 
+If you used [Vagrant](https://www.vagrantup.com/) and or [Packer](https://www.packer.io/) before, then the approach taken should look familiar. These tools abstract and or simplify the creation and deployment of virtual machine images and environments on various virtualization solutions. Perhaps they will support WSL one day, and I can retire these scripts. 
 
 The scripts still need some maturing.
 Please do read the [README](https://github.com/nicenemo/wsl-debian-boxes/blob/develop/README.md)
 if you use it.
-You currently need to naviIgate to the directory of the scripts to use them.
+You currently need to navigate to the directory of the scripts to use them.
 For me they are already quite useable for creating test environments and
 Yak shaving the ultimate development machine.
 
