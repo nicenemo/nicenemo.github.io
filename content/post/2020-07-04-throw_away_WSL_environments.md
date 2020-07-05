@@ -27,7 +27,7 @@ The last few weeks for me were partially about automating virtual environment cr
 [Ansible for Devops](https://leanpub.com/ansible-for-devops)
 * the related [Ansible 101](https://www.youtube.com/playlist?list=PL2_OBreMn7FqZkvMYt6ATmgC0KAGGJNAN) YouTube video series.
 
-One of terms Jeff coined was _snowflake server_, a machine that is (partially),
+One the of terms Jeff coined was _snowflake server_, a machine that is (partially),
 configured and updated by hand. Some changes are not documented and it is not possible to recreate the machine in case of disaster. My development machine, is very similar to a snowflake server. How about your development machine?
 Recreation of my machine on fresh hardware without lots of manual steps is impossible. Installing it takes a day.  Next it takes days for all the things I forgot. Change is needed. Perhaps Ansible is part of a solution.
 
