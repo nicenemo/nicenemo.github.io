@@ -101,6 +101,15 @@ I did no further updates This is for creating a base image.
 Further updates and customization should be done using Ansible.
 Ansible is declarative and in general more readable and easier to maintain than Shell scripts.
 
+If you look into the scripts you will notice that I use a few Bash scripts and shell commands to upgrade and install the software. I did not use Ansible, because Ansible running on the machine that you update does break because of Python upgrades.
+
+I thought of running an all Linux solution instead of PowerShell. That would mean I need to have a WSL machine first. I think the amount of PowerShell needed for bootstrapping is limited. 
+
+The machines are not installed with an SSH server yet. They are intended as something to use Ansible from, not, as something to administer with Ansible from the outside for now. 
+
+Networking in WSL is a bit complicated. Every WSL machine is in its own isolated subnet and ports are only accessible via port forwarding on the host. The host is available on the default route IP address. Sadly after reboot the network addresses used changed. So administering the windows host from within WSL using Ansible will be an extra challenge besides installing an SSH server on the host first.
+  
+
 The scripts still need some maturing.
 Please do read the [README](https://github.com/nicenemo/wsl-debian-boxes/blob/develop/README.md)
 if you use it.
