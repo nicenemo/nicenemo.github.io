@@ -1,7 +1,7 @@
 ---
 title: "Throw away WSL environments"
 date: 2020-07-04T23:31:09+02:00
-draft: true
+draft: false
 categories:
   - testing
 tags:
