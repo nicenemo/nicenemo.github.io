@@ -58,7 +58,7 @@ Printing out and learning some hotkeys of
 [Windows](https://www.hanselman.com/blog/CollectingWindows10AnniversaryEditionKeyboardShortcuts.aspx)
 or Mac and your favourite programs can be useful.
 Did you know that Microsoft calls pressing the combination of _Shift_, _Control_, _Alt_ and _Windows_,
-the _Office Key_ ? It can be used to start Office the following Office programs:
+the _Office Key_ ? It can be used to start the following Office programs:
 
 |Key      | Function                                                                               |
 |:--------|:---------------------------------------------------------------------------------------|
