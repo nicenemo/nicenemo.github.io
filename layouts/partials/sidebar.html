@@ -1,0 +1,32 @@
+{{- $posts := where site.RegularPages "Section" "post" -}}
+<aside class="side" aria-label="Sidebar">
+<section>
+<h2>{{ site.Params.author }}</h2>
+<p>{{ site.Params.description }}</p>
+<p><a href="{{ "about/" | relURL }}">Read more…</a></p>
+</section>
+<section>
+<h2>Links</h2>
+<ul>
+<li><a href="{{ site.Params.resume }}">Resume</a></li>
+{{ range hugo.Data.projects.playbooks }}<li><a href="{{ .site }}">{{ .name }}</a></li>
+{{ end }}{{ range hugo.Data.projects.other }}{{ if ne .name "Resume" }}<li><a href="{{ .site }}">{{ .name }}</a></li>
+{{ end }}{{ end }}<li><a href="{{ site.Params.github }}">GitHub</a></li>
+<li><a href="{{ "index.xml" | relURL }}">RSS</a></li>
+</ul>
+</section>
+<section>
+<h2>Recent posts</h2>
+<ul>
+{{ range first 8 $posts.ByDate.Reverse }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end }}</ul>
+</section>
+{{ with site.Taxonomies.tags }}
+<section>
+<h2>Tags</h2>
+<ul class="tagcount">
+{{ range first 12 .ByCount }}<li><a href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Name }}</a> <span class="count">{{ .Count }}</span></li>
+{{ end }}</ul>
+</section>
+{{ end }}
+</aside>

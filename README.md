@@ -49,6 +49,7 @@ The old `silhouette-hugo` theme was removed. It loaded these from CDNs, all outd
 
 Run `./githooks-setup.sh` once per checkout. The `pre-commit` hook in `.githooks/` runs `gitleaks` on the staged
 changes, `yamllint`, `actionlint` (the Pages workflow), `markdownlint-cli2` (README and posts) and a `hugo` build that
-must finish without warnings; the `pre-push` hook runs `trufflehog` on the commits being pushed. The hooks refuse to run
+must finish without warnings, and `scripts/check-dependencies.sh` (no vendored libraries, nothing loaded from other
+origins); the `pre-push` hook runs `trufflehog` on the commits being pushed and `osv-scanner` for known vulnerabilities. The hooks refuse to run
 when a tool is missing. The tools are installed by the kos playbooks (`common_packages` in `inventory.yml`; `trufflehog`
-is a manual install). Never bypass the hooks with `--no-verify`.
+is a manual install; `osv-scanner` is installed from `common_packages` too). Never bypass the hooks with `--no-verify`.

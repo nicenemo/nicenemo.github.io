@@ -15,6 +15,7 @@ need yamllint 'sudo pacman -S yamllint'
 need actionlint 'sudo pacman -S actionlint'
 need markdownlint-cli2 'sudo pacman -S markdownlint-cli2'
 need hugo 'sudo pacman -S hugo'
+need osv-scanner 'sudo pacman -S osv-scanner'
 
 gitleaks git --staged --redact --no-banner --verbose
 
@@ -30,3 +31,6 @@ if grep -qiE '^(WARN|ERROR)' <<<"$log"; then
     echo "$log" >&2
     exit 1
 fi
+
+# No vendored libraries and nothing loaded from other origins.
+scripts/check-dependencies.sh

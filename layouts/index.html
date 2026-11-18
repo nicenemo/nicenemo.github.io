@@ -7,9 +7,13 @@
 {{ end }}
 {{ define "main" }}
 {{ with .Content }}{{ . }}{{ end }}
-<p class="lead">{{ site.Params.tagline }}</p>
-<h2 id="posts">Latest posts</h2>
-{{ partial "postlist.html" (first 5 (where site.RegularPages "Section" "post").ByDate.Reverse) }}
+{{ range first 1 (where site.RegularPages "Section" "post").ByDate.Reverse }}
+<article class="article latest" id="latest">
+<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+<p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time> · {{ .ReadingTime }} min read{{ with .Params.tags }} · {{ range . }}<a class="tag-link" href="{{ printf "tags/%s/" (. | urlize) | relURL }}">{{ . }}</a> {{ end }}{{ end }}</p>
+{{ .Content }}
+</article>
+{{ end }}
 <p><a href="{{ "post/" | relURL }}">All posts</a></p>
 <h2 id="projects">Projects</h2>
 <p>Ansible playbooks for the machines at home, each with its own project page and decision records.</p>

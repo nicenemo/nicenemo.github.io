@@ -15,3 +15,6 @@ if git rev-parse --verify --quiet "@{upstream}" >/dev/null; then
 else
     trufflehog git "file://$PWD" --results=verified,unknown,unverified --fail >/dev/null
 fi
+
+# Known vulnerabilities in dependencies (osv-scanner needs the network).
+scripts/check-dependencies.sh --osv

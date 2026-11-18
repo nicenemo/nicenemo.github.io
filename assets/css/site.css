@@ -30,5 +30,23 @@ h3 { font-size: 1.15rem; margin: 0 0 4px; }
 .pager a { padding: 6px 12px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; background: var(--panel); }
 .pager a:hover { background: var(--code); }
 
+/* two columns: content and the sidebar with the links of the original site */
+.wrap { max-width: 1180px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 17rem; gap: 8px 40px; align-items: start; padding-top: 8px; padding-bottom: 8px; }
+.layout > main { min-width: 0; }
+.layout > main > table th { width: 11rem; }
+.side { position: sticky; top: 64px; font-size: .95rem; padding-top: 8px; }
+.side section { margin: 0 0 22px; }
+.side h2 { margin: 0 0 6px; padding: 0 0 4px; font-size: .78rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); border-bottom: 1px solid var(--line); }
+.side ul { list-style: none; margin: 0; padding: 0; }
+.side li { max-width: none; margin: 0; }
+.side li a { display: block; padding: 4px 0; text-decoration: none; }
+.side li a:hover { text-decoration: underline; }
+.side p { margin: 0 0 6px; color: var(--muted); }
+.tagcount li { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.tagcount .count { min-width: 1.6em; padding: 0 7px; text-align: center; font-size: .8rem; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--muted); }
+.latest > h2:first-child { margin-top: 20px; }
+.latest > h2 a { text-decoration: none; color: inherit; }
+@media (max-width: 900px) { .layout { grid-template-columns: minmax(0, 1fr); } .side { position: static; border-top: 1px solid var(--line); margin-top: 24px; } }
 @media (max-width: 560px) { header.hero { padding: 36px 0 24px; } }
-@media print { nav.sitenav, header.hero .btns, .pager, .skip { display: none; } header.hero { background: none; color: inherit; padding: 0; } header.hero h1, header.hero .tag { color: inherit; text-shadow: none; } }
+@media print { .side, nav.sitenav, header.hero .btns, .pager, .skip { display: none; } header.hero { background: none; color: inherit; padding: 0; } header.hero h1, header.hero .tag { color: inherit; text-shadow: none; } }

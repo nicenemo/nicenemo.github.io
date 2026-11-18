@@ -22,7 +22,7 @@ My First workflow will be simple:
 * I use a Workflow *while* construct to stay below 45 Since the 44th Fibonacci number is the largest that fits in an Integer;
 * Use a *Sleep* activity that Sleeps for 15 Seconds so that we can see the result in the console
 
-Graphically this is shown in Visual Studio as follows: ![The first Fibonacci workflow in the Visual Studio designer](http://2.bp.blogspot.com/_tXGm93SSyrs/SXm_ItZQK-I/AAAAAAAACyM/TzfiYxTk4Qg/s320/FirstFibWorkflow.jpg)
+Graphically this is shown in Visual Studio as follows: (The screenshot of the workflow in the Visual Studio designer was hosted on Blogger and is no longer available.)
 
 This is a very simple sequential workflow with conditional iteration. In the code behind the conditions and the part for the code blob are programmed. Actually this should only refer to code defined elsewhere and not be used for your actual programming.
 
