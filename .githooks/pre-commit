@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Pre-commit hook: scan staged changes for secrets (gitleaks), then lint the YAML, the GitHub Actions workflow and the
+# Markdown, and check that the Hugo site still builds without warnings. Enable with: ./githooks-setup.sh
+set -euo pipefail
+
+need() {
+    if ! command -v "$1" >/dev/null 2>&1; then
+        echo "pre-commit: $1 is not installed ($2); refusing to commit unchecked." >&2
+        exit 1
+    fi
+}
+
+need gitleaks 'sudo pacman -S gitleaks'
+need yamllint 'sudo pacman -S yamllint'
+need actionlint 'sudo pacman -S actionlint'
+need markdownlint-cli2 'sudo pacman -S markdownlint-cli2'
+need hugo 'sudo pacman -S hugo'
+
+gitleaks git --staged --redact --no-banner --verbose
+
+yamllint . >/dev/null
+actionlint
+markdownlint-cli2 '**/*.md' >/dev/null
+
+# Build into a temporary directory; any warning or error fails the commit.
+out="$(mktemp -d)"
+trap 'rm -rf "$out"' EXIT
+log="$(hugo --gc --minify --destination "$out" 2>&1)" || { echo "$log" >&2; exit 1; }
+if grep -qiE '^(WARN|ERROR)' <<<"$log"; then
+    echo "$log" >&2
+    exit 1
+fi

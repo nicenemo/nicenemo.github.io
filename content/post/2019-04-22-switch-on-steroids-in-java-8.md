@@ -135,7 +135,7 @@ public interface Case<T, R> extends Function<T, Optional<R>> {
 
 ## Matching with predicates
 
-We first test our *FP style* switch statement by implementing [FizzBuzz]().
+We first test our *FP style* switch statement by implementing FizzBuzz.
 
 I created this little helper class:
 
@@ -179,12 +179,13 @@ public class PatternMatchingTest implements WithQuickTheories, WithPatternMatchi
 
 }
 ```
+
 And with this I showed that it is feasible to create a useable FP style pattern matching function in Java 8.
 
 ## Partial application
 
-Next I looked on how pattern matching look like in Scala and F#. I made my code mimic this by first having a single argument function that `CaseAcceptor<T,R> match(T x)` that returns an instance of `CaseAcceptor<T,R>`. 
-It is a form of partial application. 
+Next I looked on how pattern matching look like in Scala and F#. I made my code mimic this by first having a single argument function that `CaseAcceptor<T,R> match(T x)` that returns an instance of `CaseAcceptor<T,R>`.
+It is a form of partial application.
 
 It allows you to write the *FizzBuzz* example like:
 
@@ -277,7 +278,6 @@ Like with an ordinary *switch* statement we still want to be able to match again
   }
 ```
 
-
 ## Combined matching
 
 There is no reason why you could not combine Predicate, Class, Regular Expression and value matching.
@@ -307,8 +307,6 @@ The compiler will, but the error messages will be a bit cryptic.
 >> TODO: still seems to be needed when you want to be lazy in the second argument of cases
 
 I realized that I could generalize the `Predicate` of a case to a `Funtion<T,Optional<V>>`. This is *FunctionalPredicate* is composed from a Predicate<T> and a transformation function of type `Function<T,V>`. The right hand side of the `Case`  then accepts a function of `Function<V,Optional<R>>` instead of a simple value. You may consider this a bit overengineering.
-
-
 
 I also wrote a variant that accepted the cases first and with the resulting function accepted a value to match against. This allows you to pass around a *'switch'* expression.
 

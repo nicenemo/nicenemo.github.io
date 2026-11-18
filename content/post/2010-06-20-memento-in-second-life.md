@@ -17,7 +17,7 @@ LSL is somewhat limited. It does not allow for closures or lambda functions. It 
 
 I defined fib(n) first using it's recursive definition to get the LSL right. Of course this doesn 't perform at all. After that I looked into memoizing. I noticed that inserting integers in a list is an expensive operation in LSL. However the nature of the Fibonacci algorithm makes this not necessary. The cache will always be filled in order from n=0 up to the requested number. I preseeded the list with [0,1,1] which eliminates one if clause. after that the fib function is recursively called and the results are added to the cache. Below is the final code
 
-```
+```text
 list cache=[0,1,1];
 integer  fib(integer n)
 {

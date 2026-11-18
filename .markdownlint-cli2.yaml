@@ -1,0 +1,33 @@
+---
+# markdownlint-cli2 configuration for the blog and the README
+
+config:
+  # Blog prose is not hard-wrapped
+  MD013: false
+
+  # MD001: heading levels of imported posts start below the page title
+  MD001: false
+
+  # MD004: Unordered list style (consistent asterisks)
+  MD004:
+    style: 'asterisk'
+
+  # MD024: Multiple headings with the same content (allowed in separate sub-sections)
+  MD024:
+    siblings_only: true
+
+  # MD029: Ordered list item prefix - Allow 1. 1. 1. or sequential
+  MD029:
+    style: 'one_or_ordered'
+
+  # MD033: Inline HTML is allowed (posts converted from Blogger contain some)
+  MD033: false
+
+  # MD036: A bold line as a lead-in is fine in these posts
+  MD036: false
+
+ignores:
+  - '.git/'
+  - 'public/'
+  - 'resources/'
+  - 'node_modules/'

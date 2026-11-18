@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Pre-push hook: second secret scanner (trufflehog) over the commits that are about to be pushed.
+# Enable with ./githooks-setup.sh. Verification contacts the providers of any key it finds.
+set -euo pipefail
+
+if ! command -v trufflehog >/dev/null 2>&1; then
+    echo "pre-push: trufflehog is not installed; refusing to push unscanned." >&2
+    exit 1
+fi
+
+# Scan only what the remote does not have yet; on the first push scan everything.
+if git rev-parse --verify --quiet "@{upstream}" >/dev/null; then
+    base="$(git rev-parse "@{upstream}")"
+    trufflehog git "file://$PWD" --since-commit "$base" --branch HEAD --results=verified,unknown,unverified --fail >/dev/null
+else
+    trufflehog git "file://$PWD" --results=verified,unknown,unverified --fail >/dev/null
+fi

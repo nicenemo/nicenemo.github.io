@@ -44,3 +44,11 @@ The old `silhouette-hugo` theme was removed. It loaded these from CDNs, all outd
   deploy-pages v5), and Hugo is downloaded from the official release and verified against its published SHA-256 sums.
 * There is no `package.json` or Go module, so there are no other dependencies. Posts may contain raw HTML
   (`markup.goldmark.renderer.unsafe`); they are the author's own.
+
+## Linting and hooks
+
+Run `./githooks-setup.sh` once per checkout. The `pre-commit` hook in `.githooks/` runs `gitleaks` on the staged
+changes, `yamllint`, `actionlint` (the Pages workflow), `markdownlint-cli2` (README and posts) and a `hugo` build that
+must finish without warnings; the `pre-push` hook runs `trufflehog` on the commits being pushed. The hooks refuse to run
+when a tool is missing. The tools are installed by the kos playbooks (`common_packages` in `inventory.yml`; `trufflehog`
+is a manual install). Never bypass the hooks with `--no-verify`.

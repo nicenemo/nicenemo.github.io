@@ -79,7 +79,7 @@ With just copying you have to consider that:
 * Code samples in general do not come with unit tests
 
 See:
-https://stackoverflow.com/questions/40743724/fastest-way-to-copy-a-file-over-socket?rq=1
+<https://stackoverflow.com/questions/40743724/fastest-way-to-copy-a-file-over-socket?rq=1>
 
 ## Libraries
 

@@ -1,0 +1,21 @@
+# gitleaks configuration: default ruleset plus a few project-specific rules
+title = "hanskruse.eu gitleaks config"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "ansible-vault-password"
+description = "Ansible vault password file contents or inline password"
+regex = '''(?i)(vault[_-]?pass(word)?)\s*[:=]\s*['"]?[^\s'"]{6,}'''
+keywords = ["vault"]
+
+[[allowlists]]
+description = "Public keys are not secrets"
+paths = ['''\.pub$''']
+
+# A line that only references a Jinja variable (for example a password variable in a test command) is not a secret
+[[allowlists]]
+description = "Jinja variable references"
+regexTarget = "line"
+regexes = ['''\{\{[^}]*\}\}''']

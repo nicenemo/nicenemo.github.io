@@ -20,11 +20,11 @@ I did customize my 40% Planck keyboard and customized it a bit too much. I will 
 When first looking into a smaller keyboard I wanted a 40% or 60% split ergonomic keyboard.
 I was looking at Kyria or a Daisy. I might buy one of these later. The Ergodox is too big for me.
 I am waiting for my second Planck for us at work or on the move. Only getting Zealeos 62 gram purple switches are very hard to get.
-So it might take some time before it is useable. 
+So it might take some time before it is useable.
 
-With a 60% Keyboard and certainly with a 40% you need layers. The standard layouts provided make it easy to start discover/guess where the number keys etc are. I decided to keep it as is for two weeks before starting to customize it. Then I started adding layers and changing existing ones. I used inspiration from many keymaps and read through the QMK documentation and source code. 
+With a 60% Keyboard and certainly with a 40% you need layers. The standard layouts provided make it easy to start discover/guess where the number keys etc are. I decided to keep it as is for two weeks before starting to customize it. Then I started adding layers and changing existing ones. I used inspiration from many keymaps and read through the QMK documentation and source code.
 
- I quickly  noticed the limitations of keyboards. Keyboards can only send letters, numbers, function keys modifier keys and a few others as key codes. Diacritics or Chinese characters is something that is done on the computer. The keyboard has no idea in what program I am in. I decided to do away with Autohotkey. I improved my vi knowledge, switch to Z shell and turn on vi mode in both Z shell and Bash. I did not program any macros in my keyboard. Macros make only sense in the context of specific programs. If I want macros, I probably would use Autohotkey or the macro functionality of Vim or Visual Studio Code. 
+ I quickly  noticed the limitations of keyboards. Keyboards can only send letters, numbers, function keys modifier keys and a few others as key codes. Diacritics or Chinese characters is something that is done on the computer. The keyboard has no idea in what program I am in. I decided to do away with Autohotkey. I improved my vi knowledge, switch to Z shell and turn on vi mode in both Z shell and Bash. I did not program any macros in my keyboard. Macros make only sense in the context of specific programs. If I want macros, I probably would use Autohotkey or the macro functionality of Vim or Visual Studio Code.
 
 What I used a lot was the functionality to have a different behaviour when holding a key. For example my space bar when tapped is just normal space. When hold it works as an extra layer key and the keys left and right of it are delete and backspace keys. I did move my enter key to be on the right layer key. The left layer key is an extra backspace when tapped. With this change I created a thumb-cluster like you find on split ergonomic keyboards, like yours.
 
@@ -36,7 +36,7 @@ Most of my time I work from home nowadays because of Covid. One day when I was a
 
 You might have heard about the Space Cadet Keyboard which has a hyper key, the combination of shift control Windows and Alt. Microsoft on Windows defined it as the Office-Key. The Office-Key  allows you to start Office Programs or open LinkedIn in the browser. I defined 2 letter keys to be used as office keys when held.
 
-During my summer holiday I did not use my keyboard a lot. I forgot some layers. 
+During my summer holiday I did not use my keyboard a lot. I forgot some layers.
 
 The last few months I am using my Planck on an almost daily basis and I ran into some issues with my layout that need change:
 
@@ -53,7 +53,7 @@ Changes I will make soon are:
 * Get an useable insert key
 * Make the backspace key a backslash key.
 
-My current keyboard layout https://github.com/nicenemo/franken-planck. At the moment of writing still with double function cursor keys and Hyper key support. 
+My current keyboard layout <https://github.com/nicenemo/franken-planck>. At the moment of writing still with double function cursor keys and Hyper key support.
 
 I am curious about your experience with the Ergodox after two weeks, after a month and after 3 months.
 Since it is bigger than a 40% I wonder whether you will change it that much as I did with my Planck.

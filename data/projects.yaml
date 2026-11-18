@@ -1,3 +1,4 @@
+---
 playbooks:
   - name: kos
     summary: Lenovo ThinkPad T450s with CachyOS, systemd-boot, Intel Broadwell graphics, TLP and a development toolbox.
