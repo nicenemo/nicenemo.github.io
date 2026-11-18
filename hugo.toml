@@ -1,0 +1,33 @@
+baseURL = 'https://hanskruse.eu/'
+locale = 'en-GB'
+title = 'Hans Kruse'
+copyright = '© Hans Kruse'
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    guessSyntax = true
+  [markup.goldmark.renderer]
+    # The posts are the author's own and contain some raw HTML.
+    unsafe = true
+
+[params]
+  author = 'Hans Kruse'
+  description = 'Monadic programmer, software engineer with a passion for cooking.'
+  tagline = 'Code that is not there, is not wrong. Data that is not present is not fake.'
+  contentSharing = 'Feel free to share this content non commercially, Attribution-NonCommercial-ShareAlike.'
+  github = 'https://github.com/nicenemo'
+  resume = 'https://resume.hanskruse.eu'

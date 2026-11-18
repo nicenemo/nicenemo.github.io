@@ -1,0 +1,23 @@
+{{ define "hero" }}
+<header class="hero"><div class="wrap">
+<h1>{{ site.Title }}</h1>
+<p class="tag">{{ site.Params.description }}</p>
+{{ partial "hero-buttons.html" . }}
+</div></header>
+{{ end }}
+{{ define "main" }}
+{{ with .Content }}{{ . }}{{ end }}
+<p class="lead">{{ site.Params.tagline }}</p>
+<h2 id="posts">Latest posts</h2>
+{{ partial "postlist.html" (first 5 (where site.RegularPages "Section" "post").ByDate.Reverse) }}
+<p><a href="{{ "post/" | relURL }}">All posts</a></p>
+<h2 id="projects">Projects</h2>
+<p>Ansible playbooks for the machines at home, each with its own project page and decision records.</p>
+<div class="cards">
+{{ range hugo.Data.projects.playbooks }}{{ partial "card.html" . }}{{ end }}
+</div>
+<h2 id="more">More</h2>
+<div class="cards">
+{{ range hugo.Data.projects.other }}{{ partial "card.html" . }}{{ end }}
+</div>
+{{ end }}

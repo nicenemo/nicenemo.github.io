@@ -1,0 +1,23 @@
+{{- $cur := .RelPermalink -}}
+<nav class="sitenav" aria-label="Site"><div class="wrap">
+<a class="brand" href="{{ "" | relURL }}">{{ site.Title }}</a>
+<a class="key" href="{{ "post/" | relURL }}">Posts</a>
+<a class="key" href="{{ "#projects" | relURL }}">Projects</a>
+<details class="menu"><summary aria-label="Menu"><span class="burger" aria-hidden="true"></span><span class="label">Menu</span></summary>
+<div class="panel">
+<div class="col"><h2>Site</h2><ul>
+<li><a href="{{ "" | relURL }}"{{ if .IsHome }} aria-current="page"{{ end }}>Home</a></li>
+<li><a href="{{ "post/" | relURL }}"{{ if eq .Section "post" }} aria-current="page"{{ end }}>Posts</a></li>
+<li><a href="{{ "about/" | relURL }}"{{ if eq $cur ("about/" | relURL) }} aria-current="page"{{ end }}>About</a></li>
+<li><a href="{{ "tags/" | relURL }}"{{ if eq .Kind "taxonomy" }} aria-current="page"{{ end }}>Tags</a></li>
+<li><a href="{{ "index.xml" | relURL }}">RSS</a></li>
+</ul></div>
+<div class="col"><h2>Ansible playbooks</h2><ul>
+{{ range hugo.Data.projects.playbooks }}<li><a href="{{ .site }}">{{ .name }}</a></li>
+{{ end }}</ul></div>
+<div class="col"><h2>More</h2><ul>
+{{ range hugo.Data.projects.other }}<li><a href="{{ .site }}">{{ .name }}</a></li>
+{{ end }}<li><a href="{{ site.Params.github }}">GitHub</a></li>
+</ul></div>
+</div></details>
+</div></nav>

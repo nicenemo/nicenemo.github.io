@@ -1,0 +1,10 @@
+{{ define "hero" }}
+<header class="hero"><div class="wrap">
+<h1>Page not found</h1>
+<p class="tag">This page does not exist, or moved.</p>
+{{ partial "hero-buttons.html" . }}
+</div></header>
+{{ end }}
+{{ define "main" }}
+<p>Try the <a href="{{ "post/" | relURL }}">posts</a> or the <a href="{{ "" | relURL }}">home page</a>.</p>
+{{ end }}

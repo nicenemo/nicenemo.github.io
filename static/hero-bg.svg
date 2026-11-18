@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#090b19"/><stop offset=".6" stop-color="#150f22"/><stop offset="1" stop-color="#2a1220"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="520" fill="url(#sky)"/>
+  <!-- stars -->
+  <g fill="#f6e7a6">
+    <circle cx="140" cy="60" r="1.6"/><circle cx="330" cy="130" r="1.2"/><circle cx="520" cy="48" r="1.8"/>
+    <circle cx="760" cy="96" r="1.2"/><circle cx="980" cy="40" r="1.6"/><circle cx="1210" cy="110" r="1.4"/>
+    <circle cx="1420" cy="62" r="1.8"/><circle cx="1540" cy="150" r="1.2"/><circle cx="60" cy="170" r="1.3"/>
+  </g>
+  <!-- swirling night sky: dark red and orange waves that run all the way through -->
+  <g fill="none" stroke-linecap="round" opacity=".55">
+    <path d="M-20 300 C160 250 300 350 480 300 S800 240 1000 310 S1360 260 1640 300" stroke="#3a1a34" stroke-width="46"/>
+    <path d="M-20 370 C180 320 320 420 520 370 S860 310 1060 380 S1380 330 1640 372" stroke="#7a2a1c" stroke-width="40"/>
+    <path d="M-20 440 C170 400 330 480 540 440 S880 390 1080 450 S1400 410 1640 442" stroke="#b5481f" stroke-width="30"/>
+    <path d="M-20 495 C190 462 340 520 560 490 S900 455 1100 500 S1420 470 1640 492" stroke="#7a2a1c" stroke-width="26"/>
+  </g>
+</svg>

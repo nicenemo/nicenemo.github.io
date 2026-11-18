@@ -1,14 +1,19 @@
-{{ define "head" }}
-
-{{ end }}
-{{ define "title" }}
-  {{ .Title }} | {{ .Site.Title }}
+{{ define "hero" }}
+<header class="hero"><div class="wrap">
+<h1>{{ .Title }}</h1>
+{{ if not .Date.IsZero }}<p class="tag"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time> · {{ .ReadingTime }} min read</p>{{ end }}
+{{ partial "hero-buttons.html" . }}
+</div></header>
 {{ end }}
 {{ define "main" }}
-<article class="container mt-4 post">
-    <h1>{{ .Title }}</h1>
-    
-    {{ .Content }}
+<article class="article">
+{{ .Content }}
 </article>
-{{ partial "sidebar" . }}
+{{ with .Params.tags }}<p class="meta">Tags: {{ range . }}<a class="tag-link" href="{{ printf "tags/%s/" (. | urlize) | relURL }}">{{ . }}</a> {{ end }}</p>{{ end }}
+{{ if and .IsPage (eq .Section "post") }}
+<nav class="pager" aria-label="Posts">
+  {{ with .NextInSection }}<a rel="prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}
+  {{ with .PrevInSection }}<a rel="next" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+</nav>
+{{ end }}
 {{ end }}

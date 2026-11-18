@@ -1,0 +1,74 @@
+/* Shared by the Ansible playbook projects (kos, mikmakmuk, multiberry, samos): bar with a hamburger menu, wave banner, content. */
+:root {
+  color-scheme: light dark;
+  --bg: #f6f7fb; --panel: #ffffff; --text: #1b2030; --muted: #5a6478; --line: #d9deea;
+  --accent: #3a56d4; --accent-text: #ffffff; --code: #eef1f8;
+  /* names used by the longer mikmakmuk page */
+  --card-bg: var(--panel); --border: var(--line); --text-muted: var(--muted); --code-bg: var(--code); --code-text: var(--text);
+  --accent-hover: #2c43ad; --warning-bg: rgba(245, 158, 11, .12); --warning-border: #b45309; --warning-text: #b45309;
+  --teaser-bg: rgba(58, 86, 212, .06); --teaser-border: #3a56d4;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0b0e14; --panel: #151a26; --text: #e6e9f0; --muted: #9aa4ba; --line: #2a3142;
+          --accent: #8ea2ff; --accent-text: #0b0e14; --code: #1d2434;
+          --accent-hover: #b4c1ff; --warning-bg: rgba(245, 158, 11, .1); --warning-border: #d97706; --warning-text: #f59e0b;
+          --teaser-bg: rgba(142, 162, 255, .07); --teaser-border: #8ea2ff; }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+body { margin: 0; background: var(--bg); color: var(--text);
+       font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent); }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+/* the bar: brand, two key links, a hamburger menu with everything */
+nav.sitenav { position: sticky; top: 0; z-index: 20; background: var(--panel); border-bottom: 1px solid var(--line); }
+nav.sitenav .wrap { position: relative; display: flex; align-items: center; gap: 4px 6px; padding-top: 6px; padding-bottom: 6px; }
+nav.sitenav a.brand { display: flex; align-items: center; margin-right: 10px; padding: 4px 8px 4px 0; font-weight: 700; color: var(--text); text-decoration: none; }
+nav.sitenav a.key { padding: 7px 12px; border-radius: 8px; text-decoration: none; color: var(--text); font-weight: 600; font-size: .95rem; }
+nav.sitenav a.key:hover { background: var(--code); }
+nav.sitenav details.menu { margin-left: auto; }
+nav.sitenav summary { display: flex; align-items: center; gap: 10px; padding: 7px 12px; list-style: none; cursor: pointer; user-select: none; border: 1px solid var(--line); border-radius: 8px; font-weight: 600; font-size: .95rem; }
+nav.sitenav summary::-webkit-details-marker { display: none; }
+nav.sitenav summary:hover, nav.sitenav details[open] > summary { background: var(--code); }
+nav.sitenav summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.burger { position: relative; width: 18px; height: 2px; border-radius: 2px; background: currentColor; transition: background .15s; }
+.burger::before, .burger::after { content: ""; position: absolute; left: 0; width: 18px; height: 2px; border-radius: 2px; background: currentColor; transition: transform .15s, top .15s; }
+.burger::before { top: -6px; }
+.burger::after { top: 6px; }
+details[open] .burger { background: transparent; }
+details[open] .burger::before { top: 0; transform: rotate(45deg); }
+details[open] .burger::after { top: 0; transform: rotate(-45deg); }
+nav.sitenav .panel { position: absolute; right: 16px; top: calc(100% + 6px); width: min(740px, calc(100vw - 32px)); max-height: calc(100vh - 80px); overflow: auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px 22px; padding: 16px 18px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 14px 34px rgba(0, 0, 0, .3); }
+nav.sitenav .panel h2 { margin: 0 0 6px; padding: 0; border: 0; font-size: .78rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+nav.sitenav .panel ul { margin: 0; padding: 0; list-style: none; }
+nav.sitenav .panel li { max-width: none; margin: 0; }
+nav.sitenav .panel li a { display: block; padding: 6px 8px; border-radius: 6px; color: var(--text); text-decoration: none; }
+nav.sitenav .panel li a:hover { background: var(--code); }
+nav.sitenav .panel li a[aria-current="page"] { background: var(--accent); color: var(--accent-text); font-weight: 600; }
+@media (max-width: 560px) { nav.sitenav a.key { display: none; } nav.sitenav a.brand { margin-right: 0; } }
+
+/* the wave banner runs the full width, in both colour schemes; the last button is always the link to hanskruse.eu */
+header.hero { padding: 56px 0 36px; color: #e6e9f0; background: #0b0e1c url(hero-bg.svg) center / cover no-repeat; border-bottom: 1px solid #2a3142; }
+header.hero h1 { color: #f4f5fb; text-shadow: 0 2px 14px rgba(0, 0, 0, .65); font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 8px; letter-spacing: -0.02em; line-height: 1.15; }
+header.hero .tag { font-size: 1.2rem; color: #cfd6ea; text-shadow: 0 1px 10px rgba(0, 0, 0, .7); max-width: 46rem; margin: 0 0 20px; }
+header.hero .btns { margin: 0; }
+header.hero .btns a { display: inline-block; margin: 0 8px 8px 0; padding: 8px 16px; border-radius: 8px; text-decoration: none; background: #8ea2ff; color: #0b0e14; font-weight: 600; }
+header.hero .btns a.alt { background: rgba(11, 14, 28, .55); color: #d3dbff; border: 1px solid #8ea2ff; }
+
+/* content */
+main.wrap { padding-top: 8px; padding-bottom: 8px; }
+h2 { font-size: 1.5rem; margin: 32px 0 10px; }
+p, li { max-width: 52rem; }
+code, pre { font: .9em/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--code); border-radius: 6px; }
+code { padding: 1px 5px; }
+pre { padding: 12px 14px; overflow-x: auto; max-width: 52rem; border: 1px solid var(--line); }
+pre code { padding: 0; background: none; }
+table { border-collapse: collapse; width: 100%; max-width: 52rem; background: var(--panel); }
+th, td { border: 1px solid var(--line); padding: 6px 12px; text-align: left; vertical-align: top; }
+th { background: var(--code); color: var(--muted); font-weight: 600; }
+main.wrap > table th { width: 11rem; }
+footer { margin-top: 48px; padding: 24px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
+footer p { margin: 0; }

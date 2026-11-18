@@ -1,0 +1,10 @@
+{{ define "hero" }}
+<header class="hero"><div class="wrap">
+<h1>{{ .Title }}</h1>
+<p class="tag">Posts tagged {{ .Title }}</p>
+{{ partial "hero-buttons.html" . }}
+</div></header>
+{{ end }}
+{{ define "main" }}
+{{ partial "postlist.html" .Pages.ByDate.Reverse }}
+{{ end }}

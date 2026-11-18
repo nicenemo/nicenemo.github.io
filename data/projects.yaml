@@ -1,0 +1,26 @@
+playbooks:
+  - name: kos
+    summary: Lenovo ThinkPad T450s with CachyOS, systemd-boot, Intel Broadwell graphics, TLP and a development toolbox.
+    repo: https://github.com/nicenemo/kos
+    site: https://hanskruse.eu/kos/
+  - name: samos
+    summary: Framework 13 (Ryzen AI 300) with CachyOS for Second Life, games and local AI behind a Traefik proxy.
+    repo: https://github.com/nicenemo/samos
+    site: https://hanskruse.eu/samos/
+  - name: Mik Mak Muk
+    summary: 'Three HP Mini nodes with a CachyOS base: kernel tuning, iGPU drivers, NVMe power states and benchmarks.'
+    repo: https://github.com/nicenemo/mikmakmuk
+    site: https://hanskruse.eu/mikmakmuk/
+  - name: multiberry
+    summary: Ryzen 7 3700X and GTX 1080 gaming and AI node on CachyOS with Limine.
+    repo: https://github.com/nicenemo/multiberry
+    site: https://hanskruse.eu/multiberry/
+other:
+  - name: Nachtgespenst
+    summary: Firmware that turns an M5Stack Core2 or CoreS3 touchscreen into a Bluetooth LE and USB HID macro pad.
+    repo: https://github.com/nicenemo/nachtgespenst
+    site: https://hanskruse.eu/nachtgespenst/
+  - name: Resume
+    summary: Curriculum vitae of Hans Kruse.
+    repo: https://github.com/nicenemo/resume.hanskruse.eu
+    site: https://resume.hanskruse.eu

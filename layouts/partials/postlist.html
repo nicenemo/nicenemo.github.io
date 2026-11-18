@@ -1,0 +1,9 @@
+<ul class="postlist">
+{{ range . }}
+  <li>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>{{ with .Params.tags }} · {{ range . }}<a class="tag-link" href="{{ printf "tags/%s/" (. | urlize) | relURL }}">{{ . }}</a> {{ end }}{{ end }}</p>
+    <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 220 }}{{ end }}</p>
+  </li>
+{{ end }}
+</ul>
