@@ -1,0 +1,2 @@
+{{- $p := site.GetPage (printf "/tags/%s" (. | urlize)) -}}
+<a class="tag-link" href="{{ printf "tags/%s/" (. | urlize) | relURL }}">{{ if $p }}{{ $p.Title }}{{ else }}{{ . }}{{ end }}</a>

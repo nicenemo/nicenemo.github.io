@@ -9,9 +9,9 @@ tags:
   - Debian
   - PowerShell
   - Ansible
-  - No snowflake
-  - Dev box
-  - Yak shaving
+  - no snowflake
+  - dev box
+  - yak shaving
 ---
 
 A rainy weekend is a perfect opportunity to do some yak shaving and learn a few things.  I created

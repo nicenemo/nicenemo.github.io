@@ -5,8 +5,8 @@ date: 2010-06-20T02:11:00-07:00
 lastmod: 2016-08-25T23:37:43-07:00
 draft: false
 tags:
- - vb.net
- - asp.net
+ - VB.NET
+ - ASP.NET
 aliases:
  - /2010/06/using-memoize-in-aspnet.html
 ---

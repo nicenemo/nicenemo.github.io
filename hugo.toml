@@ -3,6 +3,7 @@ locale = 'en-GB'
 title = 'Hans Kruse'
 copyright = '© Hans Kruse'
 enableRobotsTXT = true
+preserveTaxonomyNames = true
 
 [pagination]
   pagerSize = 10

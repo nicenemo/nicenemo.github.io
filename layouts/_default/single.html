@@ -9,7 +9,7 @@
 <article class="article">
 {{ .Content }}
 </article>
-{{ with .Params.tags }}<p class="meta">Tags: {{ range . }}<a class="tag-link" href="{{ printf "tags/%s/" (. | urlize) | relURL }}">{{ . }}</a> {{ end }}</p>{{ end }}
+{{ with .Params.tags }}<p class="meta">Tags: {{ range . }}{{ partial "tag.html" . }} {{ end }}</p>{{ end }}
 {{ if and .IsPage (eq .Section "post") }}
 <nav class="pager" aria-label="Posts">
   {{ with .NextInSection }}<a rel="prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}

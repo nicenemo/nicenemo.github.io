@@ -10,7 +10,7 @@
 {{ range first 1 (where site.RegularPages "Section" "post").ByDate.Reverse }}
 <article class="article latest" id="latest">
 <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-<p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time> · {{ .ReadingTime }} min read{{ with .Params.tags }} · {{ range . }}<a class="tag-link" href="{{ printf "tags/%s/" (. | urlize) | relURL }}">{{ . }}</a> {{ end }}{{ end }}</p>
+<p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time> · {{ .ReadingTime }} min read{{ with .Params.tags }} · {{ range . }}{{ partial "tag.html" . }} {{ end }}{{ end }}</p>
 {{ .Content }}
 </article>
 {{ end }}

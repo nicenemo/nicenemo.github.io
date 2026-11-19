@@ -5,7 +5,7 @@ date: 2010-06-20T02:17:00-07:00
 lastmod: 2018-08-17T03:31:19-07:00
 draft: false
 tags:
- - vb.net
+ - VB.NET
 aliases:
  - /2010/06/operator-overloading.html
 ---

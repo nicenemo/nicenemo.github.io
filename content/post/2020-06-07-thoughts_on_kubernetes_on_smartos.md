@@ -4,8 +4,8 @@ date: 2020-06-07T17:48:25+02:00
 draft: false
 tags:
   - home automation
-  - Annoying
-  - virtualization
+  - annoying
+  - virtualisation
   - Kubernetes
   - Docker
   - SmartOS

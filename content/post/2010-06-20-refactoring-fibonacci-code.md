@@ -5,7 +5,7 @@ date: 2010-06-20T02:01:00-07:00
 lastmod: 2016-08-25T23:37:43-07:00
 draft: false
 tags:
- - vb.net
+ - VB.NET
 aliases:
  - /2010/06/refactoring-fibonacci-code.html
 ---

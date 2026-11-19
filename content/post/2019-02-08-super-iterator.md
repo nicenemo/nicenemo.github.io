@@ -5,9 +5,9 @@ date: 2019-02-08T08:56:38+01:00
 draft: true
 tags:
   - Java
-  - Programming
-  - Design Pattern
-  - Functional programming
+  - programming
+  - design pattern
+  - functional programming
 ---
 A *super lazy iterator* is known by functional programmers as the [List Monad](https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad).  This is not another Monad tutorial but focusses on what was added to C# and Java to allow retrofitting this *super lazy iterator* to C# and Java.
 

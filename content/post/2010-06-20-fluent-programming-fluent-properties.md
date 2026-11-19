@@ -5,7 +5,7 @@ date: 2010-06-20T02:19:00-07:00
 lastmod: 2016-08-26T00:12:34-07:00
 draft: false
 tags:
- - vb.net
+ - VB.NET
 aliases:
  - /2010/06/fluent-programming-fluent-properties.html
 ---

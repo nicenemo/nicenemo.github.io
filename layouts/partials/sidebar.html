@@ -25,7 +25,7 @@
 <section>
 <h2>Tags</h2>
 <ul class="tagcount">
-{{ range first 12 .ByCount }}<li><a href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Name }}</a> <span class="count">{{ .Count }}</span></li>
+{{ range first 12 .ByCount }}<li><a href="{{ printf "tags/%s/" (.Name | urlize) | relURL }}">{{ .Page.Title }}</a> <span class="count">{{ .Count }}</span></li>
 {{ end }}</ul>
 </section>
 {{ end }}

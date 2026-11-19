@@ -5,8 +5,8 @@ date: 2019-04-22T18:24:30+02:00
 draft: true
 tags:
  - Java
- - Functional Programming
- - Esotheric Programming
+ - functional programming
+ - esoteric programming
 ---
 In this blogpost I will create a more advanced `switch` expression in Java step by step.
 

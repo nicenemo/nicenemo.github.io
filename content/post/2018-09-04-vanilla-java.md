@@ -5,7 +5,7 @@ date: 2018-09-04T08:25:14+02:00
 draft: false
 tags:
  - Java
- - Programming
+ - programming
 ---
 
 In the JavaScript community, not long ago, there was a discussion about using a library versus rolling your own implementation to achieve certain goals. Since there seems to be a new hot and happy JavaScript framework every two months or so, rolling your own may be attractive to some people. It even has a name *Vanilla JavaScript*. Someone even proposed   *[Vanilla-JS](http://vanilla-js.com/) framework* framework... ;). But how is that for Java? Java used to be slower paced but even here we have the problem of overchoice. For a simple problem you often have the following options:

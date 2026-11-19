@@ -6,7 +6,7 @@ lastmod: 2016-08-25T23:37:43-07:00
 draft: false
 tags:
  - secondlife
- - lsl
+ - LSL
 aliases:
  - /2010/06/memento-in-second-life.html
 ---
