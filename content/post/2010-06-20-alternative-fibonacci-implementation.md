@@ -10,7 +10,7 @@ aliases:
  - /2010/06/alternative-fibonacci-implementation.html
 ---
 
-On Scott Hanselman's blog there was another formula for Fibonacci that uses the Goldenratio and some Mathemagic to calculate Fib(n). This formula is more usefull if you want to calculate Fib(n) for a certain n and if you are not interested in the sequence. I used this formula in an alternative implementation of my FibEnumerable just to test for correctness.
+On Scott Hanselman's blog there was another formula for Fibonacci that uses the golden ratio and some Mathemagic to calculate Fib(n). This formula is more useful if you want to calculate Fib(n) for a certain n and if you are not interested in the sequence. I used this formula in an alternative implementation of my FibEnumerable just to test for correctness.
 
 ```vb
 ' Fibonacci.vb created with MonoDevelop
@@ -73,7 +73,7 @@ Namespace EUNemopolis.Math
 End Namespace
 ```
 
-To see whether this gives the same result as the original implementation I altered my main program. I walk the sequence for n=0 up to and including n=45 for both implementations. I cache the results for the first implementation. In the second foreach loop I print the results for both implementations and the difference between them. If all is correct all differences should be zero. I can use both a list or a simple array for storing the results. I choose an array here just for having used array in VB.Net. I never use arrays in C#.
+To see whether this gives the same result as the original implementation I altered my main program. I walk the sequence for n=0 up to and including n=45 for both implementations. I cache the results for the first implementation. In the second foreach loop I print the results for both implementations and the difference between them. If all is correct all differences should be zero. I can use both a list or a simple array for storing the results. I chose an array here just for having used array in VB.Net. I never use arrays in C#.
 
 ```vb
 ' Application.vb created with MonoDevelop
@@ -110,4 +110,4 @@ End Class
 End NameSpace
 ```
 
-And indeed the algorithm is correct for n=0 upto and including n=45. When you run it you will see always zero as the last value of the print statement.
+And indeed the algorithm is correct for n=0 up to and including n=45. When you run it you will always see zero as the last value of the print statement.

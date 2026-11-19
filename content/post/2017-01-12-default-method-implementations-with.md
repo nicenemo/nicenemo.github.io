@@ -8,9 +8,9 @@ aliases:
  - /2017/01/default-method-implementations-with.html
 ---
 
-Java 8 allows you to add so called ["default" method implementations to interfaces](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html). The intended use was being able to extend an existing interface without breaking existing code. A new function is added with an default implementation. Existing code does not have to change because of the default implementation.
+Java 8 allows you to add so called ["default" method implementations to interfaces](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html). The intended use was being able to extend an existing interface without breaking existing code. A new function is added with a default implementation. Existing code does not have to change because of the default implementation.
 
-A possible reason to add this to the language may be a side effect of adding support for functional programming with lambda support and "streams". By calling *stream()* to a collection you get an *Iterable* like structure with methods like *filter()*, *map()* and *flatMap().* These methods accept a lambda expression as argument. The *stream()* method is implemented as a so called default method on the *Collection* interface. A possible reason to not add *filter(), map()* and *flatmap()* directly to *Collection* may be the fact that all methods on an interface are public. You have no way of hiding an implementation detail in a private methods. This will change in Java 9.
+A possible reason to add this to the language may be a side effect of adding support for functional programming with lambda support and "streams". By calling *stream()* on a collection you get an *Iterable* like structure with methods like *filter()*, *map()* and *flatMap().* These methods accept a lambda expression as argument. The *stream()* method is implemented as a so called default method on the *Collection* interface. A possible reason to not add *filter(), map()* and *flatMap()* directly to *Collection* may be the fact that all methods on an interface are public. You have no way of hiding an implementation detail in private methods. This will change in Java 9.
 
 Note for .NET programmers, Java 8 Stream functionality has nothing to do with IO streams but are the Java way of LINQ. Sadly there is no syntactic sugar in the language to support this.
 
@@ -20,13 +20,13 @@ What else could you do with default method implementations on interfaces?
 
 One thing you could do is defining interfaces where all methods have default methods.
 
-These "interfaces" can then be used to mixin functionality in implementation classes instead of using delegation. This has the disadvantage of exposing implementation details to the external interface of the class. This should not be a problem since you already hide the class by using an interface and a factory for the functionality you want to expose. Or did you not?
+These "interfaces" can then be used to mix in functionality in implementation classes instead of using delegation. This has the disadvantage of exposing implementation details to the external interface of the class. This should not be a problem since you already hide the class by using an interface and a factory for the functionality you want to expose. Or did you not?
 
 Edit: Scala people may know this as the Cake Pattern.
 
 ### Introducing Noaber
 
-To test this idea I wrote a sample library [Noaber](https://github.com/nicenemo/jnoaber) for which the source code is available on Github.
+To test this idea I wrote a sample library [Noaber](https://github.com/nicenemo/jnoaber) for which the source code is available on GitHub.
 
 [Noaber](https://github.com/nicenemo/jnoaber) provides you with mixin functionality for functional programming. [Noaber](https://github.com/nicenemo/jnoaber) adds extra functionality for streams. It adds methods for currying and partial application for functions of more than two arguments.
 
@@ -45,13 +45,13 @@ public  interface $ extends //
 
 [Noaber](https://github.com/nicenemo/jnoaber) has a single interface you can ' implement' in your classes or extend in your interfaces.
 
-Since I consider it's name not important I opted for a single character name '$'. Why '$'?
+Since I consider its name not important I opted for a single character name '$'. Why '$'?
 
 * It is a short name that should not get in the way
 * Saves typing
 * Because '\_' is illegal to use in Java 9.
 * '$' is also available on a QWERTY keyboard and many other keyboards.
-* I was inspired by JQuery
+* I was inspired by jQuery
 
 In case you have a class that has a real public interface I got you covered too. There is a companion class *Noaber* with final static field $ that holds an implementation of *$.* In this case you have to do a static import of *Noaber.$* and prefix all calls to Noaber's functionality with '*$.'.*
 
@@ -70,9 +70,9 @@ public final class Noaber implements $ {
 
 ### Sample use of Noaber
 
-In the code below I mixin *Noaber*'s functionality by "implementing" *$.*
+In the code below I mix in *Noaber*'s functionality by "implementing" *$.*
 
-This means I can call the methods of *$* as if they where instance methods.
+This means I can call the methods of *$* as if they were instance methods.
 
 This saves a lot of typing.
 
@@ -118,12 +118,12 @@ public class CurryTest extends TestCase implements $ {
 
 ### Why call it Noaber?
 
-"Noaber" is the word for neighbor in the [Saxon](https://nl.wikipedia.org/wiki/Nedersaksisch) dialects spoken in the eastern parts of the Netherlands(Twents, Drents, Sallands,Gronings, Acherhoeks) and the north western part of Germany ([Platdeutsch](https://de.wikipedia.org/wiki/Niederdeutsche_Sprache)) and some parts of Poland and Danmark. The German word for Neigbours is Nachbarn. Do you see the pattern? A good neighbour helps you but does not get in your way. The same should be true for the Noaber library. That is why I call it Noaber ;)
+"Noaber" is the word for neighbour in the [Saxon](https://nl.wikipedia.org/wiki/Nedersaksisch) dialects spoken in the eastern parts of the Netherlands (Twents, Drents, Sallands, Gronings, Achterhoeks) and the north western part of Germany ([Plattdeutsch](https://de.wikipedia.org/wiki/Niederdeutsche_Sprache)) and some parts of Poland and Denmark. The German word for neighbours is Nachbarn. Do you see the pattern? A good neighbour helps you but does not get in your way. The same should be true for the Noaber library. That is why I call it Noaber ;)
 
 ### Future work
 
 Noaber is my structured kitchen sink of useful Java experiments. Please feel free to use it but do not expect anything.
 
-I can add just an other interface to the '$' 's list of implements clauses when I like to do so during my train travels. I get my inspiration mainly from Javascript libraries such as JQuery, Underscore, Ramda and to some extend from .NET.
+I can add just another interface to the '$' 's list of implements clauses when I like to do so during my train travels. I get my inspiration mainly from JavaScript libraries such as jQuery, Underscore, Ramda and to some extent from .NET.
 
 I probably will also remove stuff or make changes.

@@ -19,7 +19,7 @@ tags:
 imgadm avail|grep ubuntu
 ```
 
-### Getting ubuntu 2020.04 LTS server
+### Getting Ubuntu 2020.04 LTS server
 
 ```bash
 cd /opt/metadata/isos
@@ -33,10 +33,10 @@ TODO:
 
 * fixed VNC-port
 * 80 GB disk is too much
-* 4 Gb memory maybe too much too.
+* 4 GB memory maybe too much too.
 * Explore BHyve extra opts
 * Possible to set CD-ROM via extra opts on first boot only to simply
-* Setting the right model for disk and CD-ROM was the hardest. I Managed by trial and error
+* Setting the right model for disk and CD-ROM was the hardest. I managed by trial and error
 * This configuration might be useful for installing Windows too!
 
 ```json
@@ -78,7 +78,7 @@ TODO:
 }
 ```
 
-TODO: set vm UUID in variable
+TODO: set VM UUID in variable
 
 ```bash
 vmadm create -f ubuntu_2020_04.json  t

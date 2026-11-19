@@ -10,14 +10,14 @@ aliases:
  - /2010/06/refactoring-fibonacci-code.html
 ---
 
-I planned to experiment with Inversion of Control, unit tests and a Mockup Framework under VB.NET using Mono. For this planned to use the Fibonacci example discussed earlier. However in it's present form it is not pleasant to use, reusable or extendible. I want the following:
+I planned to experiment with Inversion of Control, unit tests and a Mockup Framework under VB.NET using Mono. For this I planned to use the Fibonacci example discussed earlier. However in its present form it is not pleasant to use, reusable or extendible. I want the following:
 
-* Move the fibonacci code in a separate library project. This will allow me to reuse the code more easily;
-* Use a check in the MoveNext Code on n&lt;45. This allows me to use *For Each* in the mainloop and I do not need to explicitly use an Enumarator. This is more the way I am used to program in C#. I suppose this is also common practice in VB.NET. Note that this will be slower;
-* Make an Abstract IntegerEnumerable base class that also contains an Abstract enumerator. This allows me to have the plumbing code in once place and let me concentrate on variations for the MoveNext function;
+* Move the Fibonacci code in a separate library project. This will allow me to reuse the code more easily;
+* Use a check in the MoveNext Code on n&lt;45. This allows me to use *For Each* in the mainloop and I do not need to explicitly use an Enumerator. This is more the way I am used to program in C#. I suppose this is also common practice in VB.NET. Note that this will be slower;
+* Make an Abstract IntegerEnumerable base class that also contains an Abstract enumerator. This allows me to have the plumbing code in one place and let me concentrate on variations for the MoveNext function;
 * Make a prime number finder as a variation;
 
-When then is done I can do some perfomance analysis code. I am curious about the impact of checking on '45' in the MoveNext(). Also I am interested in some variations of the MoveNext Method. First of I developed the abstract integerenumerable:
+When that is done I can do some performance analysis code. I am curious about the impact of checking on '45' in the MoveNext(). Also I am interested in some variations of the MoveNext Method. First of all, I developed the abstract integerenumerable:
 
 ```vb
 ' IntegerEnumerable.vb created with MonoDevelop
@@ -98,7 +98,7 @@ Namespace EUNemopolis.Math
 End Namespace
 ```
 
-Using this code as a base implementing all kinds of mathematica sequences becomes nothing more than implementing the Init() and MoveNext() method.
+Using this code as a base implementing all kinds of mathematical sequences becomes nothing more than implementing the Init() and MoveNext() method.
 
 ```vb
 ' Fibonacci.vb created with MonoDevelop
@@ -157,4 +157,4 @@ Namespace EUNemopolis.Math
 End Namespace
 ```
 
-When developing the code above I discovered that Monodevelop (2.01) did not have an integrated debugger on my system. I am pretty sure that there is a Mono debugger. I also read on the mono website that there was a 2.2 relase of mono with a lot of compiler improvements. So before I continue further coding i better first invest some time in updating my development environment. Another thing I noticed that one easily gets it wrong. Initially the sequence generated was off by one missing the value for n=0. This was because my init() method was never called until I added the forgotten *Overrides* tag at it. I also got the enumerator wrong. The Current value of an Enumerator is initially undefined. After the first time calling MoveNext() it will have a defined value if the MoveNext() has returned true.
+When developing the code above I discovered that MonoDevelop (2.01) did not have an integrated debugger on my system. I am pretty sure that there is a Mono debugger. I also read on the Mono website that there was a 2.2 release of Mono with a lot of compiler improvements. So before I continue coding, I had better first invest some time in updating my development environment. Another thing I noticed is that one easily gets it wrong. Initially the sequence generated was off by one missing the value for n=0. This was because my init() method was never called until I added the forgotten *Overrides* tag to it. I also got the enumerator wrong. The Current value of an Enumerator is initially undefined. After the first time calling MoveNext() it will have a defined value if the MoveNext() has returned true.

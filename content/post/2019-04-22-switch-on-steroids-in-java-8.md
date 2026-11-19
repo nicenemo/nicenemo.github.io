@@ -39,8 +39,8 @@ In Java you cannot match against:
 
 In 2007~2015 my brain was gradually contaminated by functional programming caused by exposure to:
 
-* JQuery
-* Linq (List monad in C#/VB.NET)
+* jQuery
+* LINQ (List monad in C#/VB.NET)
 * FP style JavaScript
 * A Scala course
 * Books on F#
@@ -57,7 +57,7 @@ A FP style switch expression consists of:
 * A list of case expressions that are evaluated in order until one matches. Every case consists of:
   * ~A primitive value, enumeration value, `String`, Type, Regular Expression,~ Predicate
   * Optional result
-* A case returns `Optional.empty()` if  it's predicate results into false. Otherwise an `Optional` with the value of the right hand side can be returned.
+* A case returns `Optional.empty()` if  its predicate results in false. Otherwise an `Optional` with the value of the right hand side can be returned.
 * the switch expression returns with the first non optional value that is returned.
 
 Matching a value is implemented using an `equals(...)` predicate.
@@ -105,7 +105,7 @@ So let's fix that first.
   }
 ```
 
-Now we need still need to define a helper function to create the `case` clauses. We name it `when(...)`.
+Now we still need to define a helper function to create the `case` clauses. We name it `when(...)`.
 
 ```Java
   default <T,R> Function<T, Optional<R>> when(Predicate<T> p, R result){
@@ -180,11 +180,11 @@ public class PatternMatchingTest implements WithQuickTheories, WithPatternMatchi
 }
 ```
 
-And with this I showed that it is feasible to create a useable FP style pattern matching function in Java 8.
+And with this I showed that it is feasible to create a usable FP style pattern matching function in Java 8.
 
 ## Partial application
 
-Next I looked on how pattern matching look like in Scala and F#. I made my code mimic this by first having a single argument function that `CaseAcceptor<T,R> match(T x)` that returns an instance of `CaseAcceptor<T,R>`.
+Next I looked on how pattern matching looks in Scala and F#. I made my code mimic this by first having a single argument function that `CaseAcceptor<T,R> match(T x)` that returns an instance of `CaseAcceptor<T,R>`.
 It is a form of partial application.
 
 It allows you to write the *FizzBuzz* example like:
@@ -235,7 +235,7 @@ In the following example I play with my food. (don't tell my mum.)
 
 ## Matching with regular expressions
 
-Other shorthand functionality I added was matching against regular Expressions. You can provide both a `String` or a a `Pattern` to matching against.
+Other shorthand functionality I added was matching against regular expressions. You can provide both a `String` or a `Pattern` to matching against.
 
 ```Java
 @Test
@@ -263,7 +263,7 @@ match(o).with(
 
 ## Matching with values
 
-Like with an ordinary *switch* statement we still want to be able to match against valules.
+Like with an ordinary *switch* statement we still want to be able to match against values.
 
 ```Java
 @Test
@@ -306,7 +306,7 @@ The compiler will, but the error messages will be a bit cryptic.
 
 >> TODO: still seems to be needed when you want to be lazy in the second argument of cases
 
-I realized that I could generalize the `Predicate` of a case to a `Funtion<T,Optional<V>>`. This is *FunctionalPredicate* is composed from a Predicate<T> and a transformation function of type `Function<T,V>`. The right hand side of the `Case`  then accepts a function of `Function<V,Optional<R>>` instead of a simple value. You may consider this a bit overengineering.
+I realised that I could generalise the `Predicate` of a case to a `Funtion<T,Optional<V>>`. This is *FunctionalPredicate* is composed from a Predicate<T> and a transformation function of type `Function<T,V>`. The right hand side of the `Case`  then accepts a function of `Function<V,Optional<R>>` instead of a simple value. You may consider this a bit over-engineering.
 
 I also wrote a variant that accepted the cases first and with the resulting function accepted a value to match against. This allows you to pass around a *'switch'* expression.
 
@@ -317,7 +317,7 @@ This works great until I tried:
 * To add `when` overloads for values, regular expressions and classes. The compiler cannot handle that. Circumvented in the above example with postfixing *'when'* to  *'whenPredicate'*.
 * Using subclassing with my *'whenClass'* method.
 
-Then the compiler lambda parameter binding does not work as you want it. It may be my fault but there are also seem to be some bugs in Java 8's  compiler. There seem to be some fixes in later Java versions but not for Java 8. It was too complex to sort this out for a hobby project,  so I decided to to take two steps back before adding matching Classes and regular expressions as shorthands:
+Then the compiler lambda parameter binding does not work as you want it. It may be my fault but there also seem to be some bugs in Java 8's  compiler. There seem to be some fixes in later Java versions but not for Java 8. It was too complex to sort this out for a hobby project,  so I decided to take two steps back before adding matching Classes and regular expressions as shorthands:
 
 * I removed the `FunctionalPredicate` support
 * I reverted to a single method for pattern matching.

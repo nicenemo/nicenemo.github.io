@@ -10,11 +10,11 @@ aliases:
  - /2010/06/operator-overloading.html
 ---
 
-Although I have been doing .NET since december 1999 I never followed a formal course or did take an exam. With my new employer I am going to be certified. For this I have to pass some basic exams firsts. These are not difficult but still require some study.
+Although I have been doing .NET since December 1999 I never followed a formal course or did take an exam. With my new employer I am going to be certified. For this I have to pass some basic exams first. These are not difficult but still require some study.
 
-When reading chapter one of the course book I noticed some thing called widening and narrowing operator overloading. These two overloads allow you to create some custom type instance by assigning a simple type. This caught my attention because we use some custom types which are just some Guids wrapped in a type. The wrapping is done to distinguish their use.
+When reading chapter one of the course book I noticed something called widening and narrowing operator overloading. These two overloads allow you to create some custom type instance by assigning a simple type. This caught my attention because we use some custom types which are just some Guids wrapped in a type. The wrapping is done to distinguish their use.
 
-I wrote a little test to check ik myself:
+I wrote a little test to check it myself:
 
 ```vb
 Option Strict On
@@ -67,4 +67,4 @@ Module Module1
 End Module
 ```
 
-A more didactical example would be something that converts integers to a Masstype with a kilo field augmented with some non metrical mass type classes. But it is sunday evening and there are some more urgents things to do.
+A more didactical example would be something that converts integers to a Masstype with a kilo field augmented with some non metrical mass type classes. But it is Sunday evening and there are some more urgent things to do.

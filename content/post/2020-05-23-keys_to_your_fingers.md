@@ -20,20 +20,20 @@ or layers. [Move the keys to your fingers](https://www.youtube.com/watch?v=AKGXZ
 not your fingers to the keys.
 
 A custom mechanical keyboard with all options ticked is quite expensive and is easily priced between €200,-
-and €300,- Therefore I thought it to be wise to emulate and try 40% and 60% keyboard first. More on those percentages later in this post.  I found a project that emulated QMK style layered keyboards using
-[AutoHotKey](https://www.autohotkey.com/) _(AHK)_. AutoHotKey is a keyboard macro utility
+and €300,- Therefore I thought it wise to emulate and try 40% and 60% keyboards first. More on those percentages later in this post.  I found a project that emulated QMK style layered keyboards using
+[AutoHotkey](https://www.autohotkey.com/) _(AHK)_. AutoHotkey is a keyboard macro utility
 (and much more) for Windows.
 
 I cloned and modified the [project](https://github.com/nicenemo/AutoHotkey), so that I have 40% and 60%
 keyboards on a normal 100% keyboard with the extra keys blocked and support for layers.
-Switch layers is done by tapping shift or control twice fast.
+Switching layers is done by tapping shift or control twice fast.
 It is not the same as real 40% or 60% keyboard, but it helps.
 After a week, I really noticed the benefits.
-Certainly AutoHotKey is useful on its own. I will probably use it in combination with a smaller keyboard.
+Certainly AutoHotkey is useful on its own. I will probably use it in combination with a smaller keyboard.
 
 As a computer science student in 1994, I was introduced to [Vi](https://en.wikipedia.org/wiki/Vi),
 not [Vim](https://vim.org), but the real thing, Vi.
-Vi is an advanced editor that distinguishes itself from other editors by utilizing modes.
+Vi is an advanced editor that distinguishes itself from other editors by utilising modes.
 The cursor keys, delete key, backspace key etc are not used. Instead, in Vi you are in normal mode first.
 You use _h, j, k, l_ and other keys to move around and edit.
 This has the advantage of not moving your hands.
@@ -41,18 +41,18 @@ Moving your hands to the cursor keys and back slows you down.
 Using the normal cursor keys can also be painful, if you suffer from RSI.
 Entering text in Vi, is done by switching to input mode first.
 You do this, by pressing the _i_ key. When done entering text, going back to _normal mode_ is done by
-pressing the _Escape_ key. Learning a bit more beyond those basics is really worth It! Yes I know how to exit vim. I press _ZQ_, _:q!_ is for amateurs.
+pressing the _Escape_ key. Learning a bit more beyond those basics is really worth it! Yes I know how to exit vim. I press _ZQ_, _:q!_ is for amateurs.
 
-Fast-forward to 2020. I am still interested in working faster and more comfortable. I use Vi in it's
+Fast-forward to 2020. I am still interested in working faster and more comfortable. I use Vi in its
 [SpaceVim](https://spacevim.org/) incarnation with [NeoVim](https://neovim.io/). I like it so much that I,
 _wannabe_, try to configure Vim key bindings in other programs when possible. This sometimes works well,
 but sadly this does not work in some situations.
 
-What if my keyboard has a Vi modus? I knew about so called 10 keys less (TKL) keyboards.
+What if my keyboard has a Vi mode? I knew about so called 10 keys less (TKL) keyboards.
 These are similar to common laptop keyboards in the sense that they ditch the numeric parts.
 Function keys and the numeric pad are reachable via the _Fn_ key.
-This has also exists in an _Fn Lock_ variant. But can you go further? Yes of course you can.
-Sadly The Fn key on my ThinkPad does nothing with other keys. I checked with AHK and other tooling.
+This also exists in an _Fn Lock_ variant. But can you go further? Yes of course you can.
+Sadly, the Fn key on my ThinkPad does nothing with other keys. I checked with AHK and other tooling.
 
 Printing out and learning some hotkeys of
 [Windows](https://www.hanselman.com/blog/CollectingWindows10AnniversaryEditionKeyboardShortcuts.aspx)
@@ -63,11 +63,11 @@ the _Office Key_ ? It can be used to start the following Office programs:
 |Key      | Function                                                                               |
 |:--------|:---------------------------------------------------------------------------------------|
 | Hyper   | Browser on the [office 365 site](https://www.office.com/?from=OfficeKey)               |
-| Hyper F | Onedrive                                                                               |
+| Hyper F | OneDrive                                                                               |
 | Hyper L | Browser on the [LinkedIn site](https://www.linkedin.com/feed/?trk=Officekey)           |
 | Hyper N | OneNote                                                                                |
 | Hyper O | Outlook                                                                                |
-| Hyper P | Powerpoint                                                                             |
+| Hyper P | PowerPoint                                                                             |
 | Hyper T | Teams                                                                                  |
 | Hyper W | Word                                                                                   |
 | Hyper X | Excel                                                                                  |
@@ -75,7 +75,7 @@ the _Office Key_ ? It can be used to start the following Office programs:
 
 Do you know more?
 
-The office key is nothing new but more commonly known has the _Hyper_ key.
+The office key is nothing new but more commonly known as the _Hyper_ key.
 The Windows key is also known as the _Super_ key.
 Some keyboards such as the [Space cadet keyboard](https://en.wikipedia.org/wiki/Space-cadet_keyboard)
 have a dedicated key labelled _Hyper_. The combination is awkward to press. Having a dedicated _Hyper_ key might be a good idea to have on my new keyboard.
@@ -94,12 +94,12 @@ The rows with the numbers is two rows away from the _"home row"_. Ditch that row
 The percentage does not mean that keys are shrunk, but how many keys are still left on the keyboard. Keyboards with smaller keys do exist too!
 There are variations of 60% and 40% keyboards, that do have cursor keys,
 instead of Right-Alt, Windows, Right-Shift and Right-Control keys.
-Some even have a double function, modifier when hold, cursor key when tapped.
+Some even have a double function, modifier when held, cursor key when tapped.
 Using layers a 47 key keyboard can easily go to more than 470 different keys.
 A normal keyboard has 101 or 105 keys. So less is more!
 
 Can we go further? Maybe 30%? Keyboards with fewer keys do exist,
-think about separate numeric or macro pads. Other are for more specialist use,
+think about separate numeric or macro pads. Others are for more specialist use,
 e.g. like the ones stenographers use.
 One handed keyboards such as the [FrogPad](https://en.wikipedia.org/wiki/FrogPad) is another category.
 I am not sure what the use case is for that except for people with disabilities.
@@ -110,7 +110,7 @@ It has both a Hyper and a Super key. It allows for easy entering of mathematical
 If you like to take it to the max you can go for a Space Cadet inspired keyboard,
 the [Hyper 7](http://xahlee.info/kbd/hyper_7_keyboard.html)
 Another insane keyboard is the [Wytec MK6](https://www.youtube.com/watch?v=1FHkQpYBygE).
-This is keyboard with 3 build-in screens and a KVM. This one is mainly marketed for trading floors but can also be used in other Command & Control theatres.
+This is keyboard with 3 built-in screens and a KVM. This one is mainly marketed for trading floors but can also be used in other Command & Control theatres.
 
 An overview of typical keyboard sizes:
 
@@ -138,7 +138,7 @@ Combinations of a split, ergonomic with horizontal or vertical staggering or ort
 
 I like the ortholinear 40% keyboards, such as the [Planck](https://ergodox-ez.com/pages/planck) or the [Niu40](https://kbdfans.com/products/fully-assembled-niu40-mechanical-keyboard). They force you to use layers and are portable too!
 Initially I was a bit worried about my shoulders and back when using such a tiny keyboard.
-Therefore, a 40% split ergonomic keyboard with thumb cluster might be more suitable. This allows me to place the two halves apart so that I will not sit with bent shoulders. I can even rest the two halves on the sides of an arm chair and pretend I am captain Picard.
+Therefore, a 40% split ergonomic keyboard with thumb cluster might be more suitable. This allows me to place the two halves apart so that I will not sit with bent shoulders. I can even rest the two halves on the sides of an armchair and pretend I am Captain Picard.
 
 I finally bit the bullet and bought a Planck via [Drop](https://drop.com/?referer=MEXT6P).
 It was delivered two weeks ago. It is good!! So good, I did buy two more.

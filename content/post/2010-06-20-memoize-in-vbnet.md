@@ -10,7 +10,7 @@ aliases:
  - /2010/06/memoize-in-vbnet.html
 ---
 
-I am pleased with the idea of a generalised Memoize Function. However my current implementation works from .NET 3.0 upwards because Lambda expressions are available from version 3.0. In .NET 2.0 there are no Lambda expressions. In C# lambda functions can be easily replaced with anonymous delegate implementations. In VB.NET there is no such thing as anonymous delegate implementations. That does not mean we cannot do implement Memoize in VB.NET. We have to simulate what the compiler does when compiling lambda functions with closure. We Make a class that has three things:
+I am pleased with the idea of a generalised Memoize Function. However my current implementation works from .NET 3.0 upwards because Lambda expressions are available from version 3.0. In .NET 2.0 there are no Lambda expressions. In C# lambda functions can be easily replaced with anonymous delegate implementations. In VB.NET there is no such thing as anonymous delegate implementations. That does not mean we cannot implement Memoize in VB.NET. We have to simulate what the compiler does when compiling lambda functions with closure. We make a class that has three things:
 
 * A Dictionary to serve as cache
 * A member to store a reference to the original Function
@@ -20,12 +20,12 @@ I am pleased with the idea of a generalised Memoize Function. However my current
 In our original main program we also used a lambda function to define Fibonacci recursively in terms of itself. We need to convert that to a normal function. However we cannot let that function call itself because then there would be no way to insert the caching functionality. We do the following:
 
 * We define a "Function Pointer" Fib as Func(Of Integer,Integer);
-* We define a new Function RFib that call the Fib "function pointer" in case n>=2;
-* We set Fib to the Adress of RFib;
+* We define a new Function RFib that calls the Fib "function pointer" in case n>=2;
+* We set Fib to the Address of RFib;
 * We instantiate a Memoizer m;
 * We reassign Fib as Fib=m.Memoize(Fib).
 
-This allowed me to create a working memoized Fibonacci generator for a 2.0ish VB. Actually I tried this on Mono 2.01. Unfortunately Mono somehow did not like a generalized Memoize. A Generalized version probably will work on Microsoft.NET. We use the Func(Of integer,integer) generic type. If that is not present in your version of .NET or Mono then it can be replaced with a custom delegate doing the same thing.
+This allowed me to create a working memoized Fibonacci generator for a 2.0ish VB. Actually I tried this on Mono 2.01. Unfortunately Mono somehow did not like a generalised Memoize. A Generalised version probably will work on Microsoft.NET. We use the Func(Of integer,integer) generic type. If that is not present in your version of .NET or Mono then it can be replaced with a custom delegate doing the same thing.
 
 ### Source using Generic Function Pointer
 

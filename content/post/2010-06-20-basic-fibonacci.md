@@ -10,7 +10,7 @@ aliases:
  - /2010/06/basic-fibonacci.html
 ---
 
-When I planned to do the Fibonacci sequence I wanted to do an IEnumerable(Of Integer) implementation first using the 'yield' keyword. Well that doesn't work in VB.NET because 'yield' is something specific for C#. I had to implement a full IEnumerable and IEnumerator ;(. I started using a Console Project in Monodevelop. I wrote a main program that will print the Fibonacci sequence from 0 to 44(maximum possible with integer).
+When I planned to do the Fibonacci sequence I wanted to do an IEnumerable(Of Integer) implementation first using the 'yield' keyword. Well that doesn't work in VB.NET because 'yield' is something specific for C#. I had to implement a full IEnumerable and IEnumerator ;(. I started using a Console Project in MonoDevelop. I wrote a main program that will print the Fibonacci sequence from 0 to 44(maximum possible with integer).
 
 ```vb
 ' Application.vb created with MonoDevelop
@@ -39,7 +39,7 @@ End Class
 End NameSpace
 ```
 
-Writing this program I already discovered that MonoDevelop is still missing intellisense and autocomplete. That would have been a real time saver. Also the mono compiler gave some cryptic errors on not having both System.Collections and System.Collections.Generic as imports. With some googling in MSDN on IEnumerable and IEnumerator I managed to complete an implementation. My implementation consists of class that implements IEnumerable(Of Integer). This class contains a private inner class that implements IEnumerator(Of Integer) this class does the actual Fibonacci calculation. On the outside this enumerator is not visible.
+Writing this program I already discovered that MonoDevelop is still missing intellisense and autocomplete. That would have been a real time saver. Also the mono compiler gave some cryptic errors on not having both System.Collections and System.Collections.Generic as imports. With some googling in MSDN on IEnumerable and IEnumerator I managed to complete an implementation. My implementation consists of a class that implements IEnumerable(Of Integer). This class contains a private inner class that implements IEnumerator(Of Integer) this class does the actual Fibonacci calculation. On the outside this enumerator is not visible.
 
 ```vb
 ' Fibonacci.vb created with MonoDevelop
@@ -124,4 +124,4 @@ End Property
 End Namespace
 ```
 
-For those interested I use [Karekol](http://sourceforge.net/projects/karekol/) for vb.net sourcecode to html conversion. This concludes my first implementation of the Fibonacci sequence in VB.NET. Later I will continue with one of the items mentioned in the previous blogpost.
+For those interested I use [Karekol](http://sourceforge.net/projects/karekol/) for vb.net source code to HTML conversion. This concludes my first implementation of the Fibonacci sequence in VB.NET. Later I will continue with one of the items mentioned in the previous blogpost.

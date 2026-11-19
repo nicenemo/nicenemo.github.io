@@ -28,6 +28,6 @@ enableRobotsTXT = true
   author = 'Hans Kruse'
   description = 'Monadic programmer, software engineer with a passion for cooking.'
   tagline = 'Code that is not there, is not wrong. Data that is not present is not fake.'
-  contentSharing = 'Feel free to share this content non commercially, Attribution-NonCommercial-ShareAlike.'
+  contentSharing = 'Feel free to share this content non-commercially, Attribution-NonCommercial-ShareAlike.'
   github = 'https://github.com/nicenemo'
   resume = 'https://resume.hanskruse.eu'
